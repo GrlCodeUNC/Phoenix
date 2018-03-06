@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import 'bulma/css/bulma.css';
 //importing the react bulma components
 import Card from 'react-bulma-components/lib/components/card';
