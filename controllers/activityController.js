@@ -4,14 +4,16 @@ const db = require("../models");
 module.exports = {
   findAll: function(req, res) {
 
-    // console.log(`request query param = ${req.query}`);
-    // console.log(req.query);
     // req.query = {
-    //     user: "abreaw@hotmail.com"
+    //     user: "miriam@hotmail.com"
     // }
+
+    console.log(`request query param = ${req.query}`);
+    console.log(req.query);
 
     db.Activity
       .find(req.query)
+      // .find({ user: "abreaw@hotmail.com"})
       .sort({ createDate: -1 })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
