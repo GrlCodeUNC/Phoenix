@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import 'bulma/css/bulma.css';
 import './App.css';
 import Dashboard from './pages/Dashboard';
-import Login from "./pages/Login";
+import Login from "./pages/login";
 
 const App = () => (
   <Router>
