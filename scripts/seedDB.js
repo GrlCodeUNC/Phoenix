@@ -44,6 +44,22 @@ const activitySeed = [
     user: "abreaw@hotmail.com",
     createDate: new Date(Date.now())
   },
+  {
+    title: "Travel to the Grand Canyon",
+    photo: "https://www.canyontours.com/wp-content/uploads/2013/08/pp.png",
+    plans:
+      'Take a trip to see the Grand Canyon.  Would love to travel down to the bottom or have a helicopter ride over the gorge.',
+    user: "miriam@hotmail.com",
+    createDate: new Date(Date.now())
+  },
+  {
+    title: "Travel to the Grand Canyon",
+    photo: "https://www.canyontours.com/wp-content/uploads/2013/08/pp.png",
+    plans:
+      'Take a trip to see the Grand Canyon.  Would love to travel down to the bottom or have a helicopter ride over the gorge.',
+    user: "anishapat@hotmail.com",
+    createDate: new Date(Date.now())
+  },
 ];
 
 db.Activity
