@@ -7,7 +7,7 @@ import Logo from "../../components/PhoenixLogo";
 class Login extends Component {
   render() {
     return (
-      <div className="container center">
+      <div className="has-text-centered">
         <Logo location='login'/>
         <GoogleButton />
       </div>
