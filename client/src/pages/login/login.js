@@ -2,13 +2,14 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "bulma/css/bulma.css";
 import GoogleButton from "../../components/GoogleButton";
+import Logo from "../../components/PhoenixLogo";
 
 class Login extends Component {
-    
-render() {
+  render() {
     return (
       <div className="container center">
-              <GoogleButton/>
+        <Logo location='login'/>
+        <GoogleButton />
       </div>
     );
   }
