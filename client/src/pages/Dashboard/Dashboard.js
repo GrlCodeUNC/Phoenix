@@ -8,21 +8,24 @@ import Column from 'react-bulma-components/lib/components/columns/components/col
 
 
 class Dashboard extends Component {
-  state = {activites: [] }
+  state = {
+    search: "",
+    results: [] 
+  };
  
 
-  // componentDidMount() {
-//   this.loadActivites();
-// }
+  componentDidMount() {
+  this.loadActivites();
+}
   
 
-// loadactivities = () => {
-//   API.getActivities()
-//   .then(res =>
-//       this.setState({activites: res.data, title:"", photo:"", plans: "", user:"" })
-//   )
-//   .catch(err => console.log(err));
-// };
+loadactivities = () => {
+  API.getActivities()
+  .then(res =>
+      this.setState({results: res.data.data })
+  )
+  .catch(err => console.log(err));
+};
 
 render() {
     return (
@@ -48,11 +51,9 @@ render() {
       <div className="App">
       <div className="container">
         <Columns> 
-          {this.state.activites.length ? (
+            {this.state.activites.length ? (
             <Column>
-              {this.state.activites.map(activites => (
                 <ActivityCard/> 
-              ))}
             </Column>
           ) : (
             <h3>No Results to Display</h3>

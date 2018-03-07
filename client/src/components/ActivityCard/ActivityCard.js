@@ -8,8 +8,10 @@ import Image from 'react-bulma-components/lib/components/image';
 import Heading from 'react-bulma-components/lib/components/heading';
 import Content from 'react-bulma-components/lib/components/content';
 
-const ActivityCard = () =>
+const ActivityCard = props =>
+
 <Card>
+{props.results.map(result =>
     <Card.Image size="4by3" src="http://bulma.io/images/placeholders/1280x960.png" />
     <Card.Content>
         <Media>
@@ -37,7 +39,9 @@ const ActivityCard = () =>
             <time dateTime="2016-1-1">11:09 PM - 1 Jan 2016</time>
         </Content>
     </Card.Content>
+    )}
 </Card>
+
 
 
 export default ActivityCard;
