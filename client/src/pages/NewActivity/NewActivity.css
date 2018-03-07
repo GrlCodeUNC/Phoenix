@@ -1,0 +1,22 @@
+.NewActivity {
+    background-color: lightgrey;
+    width: 700px;
+    height: 700px;
+}
+
+.title {
+    padding: 20px;
+}
+
+.keyword {
+    padding: 50px;
+    margin: 50px;
+}
+
+.pictures {
+    background-color: white;
+    padding: 50px;
+    margin: 50px;
+    height: 300px;
+    
+}
