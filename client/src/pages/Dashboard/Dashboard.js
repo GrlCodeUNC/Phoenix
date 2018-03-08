@@ -4,6 +4,7 @@ import 'bulma/css/bulma.css';
 import ActivityCard from '../../components/ActivityCard';
 import Columns from 'react-bulma-components/lib/components/columns';
 import Column from 'react-bulma-components/lib/components/columns/components/column';
+import API from '../../utils/API';
 
 
 
@@ -15,12 +16,11 @@ class Dashboard extends Component {
  
 
   componentDidMount() {
-  this.loadActivites();
+  this.loadActivity();
 }
   
-
 loadactivities = () => {
-  API.getActivities()
+  API.getActivity()
   .then(res =>
       this.setState({results: res.data.data })
   )
