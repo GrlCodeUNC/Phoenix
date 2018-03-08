@@ -18,9 +18,21 @@ class NewActivity extends Component {
     keyword: ""
   };
 
+  handleInputChange = event => {
+    // Getting the value and name of the input which triggered the change
+    const { name, value } = event.target;
+
+    // Updating the input's state
+    this.setState({
+      [name]: value
+    });
+  };
+
   createImgList = imgKeyword => {
 
-    photoAPI.getAllImages(imgKeyword)
+    // console.log(this.state.keyword);
+
+    photoAPI.getAllImages(this.state.keyword)
       .then( imgResults => {
 
         const imgArray = imgResults.data.images
@@ -33,12 +45,6 @@ class NewActivity extends Component {
       })
       .catch( err => console.log(err));
 
-  };
-
-  componentDidMount() {
-    
-    // hardcoded since there isn't a working button yet to trigger the search
-    this.createImgList("skydiving");
   };
 
   render() {
@@ -55,9 +61,14 @@ class NewActivity extends Component {
           <div className="keyword has-text-centered">
             <Field>
               <Control>
-                <Input placeholder="Keyword..." />
+                <Input placeholder="Keyword..." 
+                   value={this.state.keyword}
+                   name="keyword"
+                   onChange={this.handleInputChange}
+                   type="text"
+                />
               </Control>
-              <Button>
+              <Button onClick={this.createImgList}>
                 Search
               </Button>
             </Field>
