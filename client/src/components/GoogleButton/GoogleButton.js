@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import "bulma/css/bulma.css";
-//importing the react bulma components
-import Button from "react-bulma-components/lib/components/button";
-import Section from "react-bulma-components/lib/components/section";
-import Box from "react-bulma-components/lib/components/box";
 import PropTypes from 'prop-types';
+import API from "../../utils/API";
+import axios from "axios";
 
 class GoogleLogin extends Component {
   constructor(props) {
@@ -37,7 +35,6 @@ class GoogleLogin extends Component {
           redirect_uri: redirectUri,
           scope
         }
-
         if (responseType === 'code') {
           params.access_type = 'offline'
         }
@@ -68,10 +65,9 @@ class GoogleLogin extends Component {
       disabled: false
     })
   }
-  signIn(e) {
-    if (e) {
-      e.preventDefault() // to prevent submit if used within form
-    }
+  signIn = event => {
+    event.preventDefault();
+       // to prevent submit if used within form
     if (!this.state.disabled) {
       const auth2 = window.gapi.auth2.getAuthInstance()
       const { onSuccess, onRequest, onFailure, prompt, responseType } = this.props
@@ -82,7 +78,7 @@ class GoogleLogin extends Component {
       if (responseType === 'code') {
         auth2.grantOfflineAccess(options).then(res => onSuccess(res), err => onFailure(err))
       } else {
-        auth2.signIn(options).then(res => this._handleSigninSuccess(res), err => onFailure(err))
+        auth2.signIn(options).then(res => this._handleSigninSuccess(res),)
       }
     }
   }
@@ -102,9 +98,20 @@ class GoogleLogin extends Component {
       email: basicProfile.getEmail(),
       name: basicProfile.getName()
     }
-    console.log(res.profileObj.imageUrl);
-  }
-
+    localStorage.clear();
+    localStorage.setItem("name", res.profileObj.name);
+    localStorage.setItem("email", res.profileObj.email);
+    localStorage.setItem("picture", res.profileObj.imageUrl);
+    // console.log(localStorage.getItem("email"));
+    API.getActivityEmail("anishapat")
+    .then(function(response) {
+      // console.log(response)
+    })
+      // .then(res => this.setState({ email: res.profileObj.email }))
+      .catch(err => console.log(err))
+  
+}
+  
   render() {
     const { tag, type, style, className, disabledStyle, buttonText, children } = this.props
     const disabled = this.state.disabled || this.props.disabled
@@ -185,25 +192,4 @@ GoogleLogin.defaultProps = {
 
 export default GoogleLogin
 
-
-
-
-
-
-
-
-
-// const GoogleButton = () =>
-// // <span className= "googleButton">
-// <div className="google has-text-centered">
-// <Section>
-//     <Box>
-//         <Button color="primary">
-//         Google Sign-in
-//         </Button>
-//     </Box>
-// </Section>
-// </div>
-
-// export default GoogleButton;
 
