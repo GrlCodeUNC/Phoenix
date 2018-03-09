@@ -14,10 +14,10 @@ mongoose.connect(
 const activitySeed = [
   {
     title: "Sky Diving",
-    photo: "http://skydiveperris.com/first-time-skydiving-los-angeles/",
+    photo: "http://skydiveparacletexp.com/wp-content/uploads/2016/11/IMG_0036-1200x400.jpg",
     plans:
       'Skydiving in the Raleigh area.  Need to look up different places that offer these services',
-    user: "abreaw@hotmail.com",
+    user: "abreaw328@gmail.com",
     createDate: new Date(Date.now())
   },
   {
@@ -25,7 +25,7 @@ const activitySeed = [
     photo: "http://www.swingornothing.com/wp-content/uploads/2017/09/Berkeley-Repertory-Theater-Gala-April-2-2016-team-cropped-1440x810.jpg",
     plans:
       'Learn to swing dance with a partner.',
-    user: "abreaw@hotmail.com",
+    user: "abreaw328@gmail.com",
     createDate: new Date(Date.now())
   },
   {
@@ -33,7 +33,7 @@ const activitySeed = [
     photo: "https://cdn.viagogo.net/img/cat/34772/1/17.jpg",
     plans:
       'Go to a Halsey concert.  Need to check to see when she is in town',
-    user: "abreaw@hotmail.com",
+    user: "abreaw328@gmail.com",
     createDate: new Date(Date.now())
   },
   {
@@ -41,7 +41,7 @@ const activitySeed = [
     photo: "https://www.canyontours.com/wp-content/uploads/2013/08/pp.png",
     plans:
       'Take a trip to see the Grand Canyon.  Would love to travel down to the bottom or have a helicopter ride over the gorge.',
-    user: "abreaw@hotmail.com",
+    user: "abreaw328@gmail.com",
     createDate: new Date(Date.now())
   },
   {
@@ -49,7 +49,7 @@ const activitySeed = [
     photo: "https://www.canyontours.com/wp-content/uploads/2013/08/pp.png",
     plans:
       'Take a trip to see the Grand Canyon.  Would love to travel down to the bottom or have a helicopter ride over the gorge.',
-    user: "miriam@hotmail.com",
+    user: "weirich.mir@gmail.com",
     createDate: new Date(Date.now())
   },
   {
@@ -57,7 +57,15 @@ const activitySeed = [
     photo: "https://www.canyontours.com/wp-content/uploads/2013/08/pp.png",
     plans:
       'Take a trip to see the Grand Canyon.  Would love to travel down to the bottom or have a helicopter ride over the gorge.',
-    user: "anishapat@hotmail.com",
+    user: "patella0802@gmail.com",
+    createDate: new Date(Date.now())
+  },
+  {
+    title: "Travel to the Grand Canyon",
+    photo: "https://www.canyontours.com/wp-content/uploads/2013/08/pp.png",
+    plans:
+      'Take a trip to see the Grand Canyon.  Would love to travel down to the bottom or have a helicopter ride over the gorge.',
+    user: "snz1210@gmail.com",
     createDate: new Date(Date.now())
   },
 ];
@@ -66,7 +74,7 @@ db.Activity
   .remove({})
   .then(() => db.Activity.collection.insertMany(activitySeed))
   .then(data => {
-    console.log(`${data.ninserted} records inserted!`);
+    console.log(`${data.insertedCount} records inserted!`);
     process.exit(0);
   })
   .catch(err => {
