@@ -27,15 +27,15 @@ const ActivityCard = props =>
                     {props.user}
                 </Heading>
                 <Heading subtitle size={6}>
-                    @johnsmith
+                    @username
                 </Heading>
             </MediaItem>
         </Media>
         <Content>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            {props.plans}
             <a>@bulmaio</a>
             <br />
-            <time dateTime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+            <time>{props.createDate}</time>
         </Content>
     </Card.Content>
 </Card>
