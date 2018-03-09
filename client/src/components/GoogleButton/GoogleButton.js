@@ -102,10 +102,13 @@ class GoogleLogin extends Component {
     localStorage.setItem("name", res.profileObj.name);
     localStorage.setItem("email", res.profileObj.email);
     localStorage.setItem("picture", res.profileObj.imageUrl);
-    // console.log(localStorage.getItem("email"));
-    API.getActivityEmail("anishapat")
+
+    const userEmail = localStorage.getItem("email");
+    console.log(userEmail);
+    
+    API.getActivityEmail(userEmail)
     .then(function(response) {
-      // console.log(response)
+      console.log(response)
     })
       // .then(res => this.setState({ email: res.profileObj.email }))
       .catch(err => console.log(err))
