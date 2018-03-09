@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import 'bulma/css/bulma.css';
 //importing the react bulma components
 import Card from 'react-bulma-components/lib/components/card';
@@ -8,9 +8,10 @@ import Image from 'react-bulma-components/lib/components/image';
 import Heading from 'react-bulma-components/lib/components/heading';
 import Content from 'react-bulma-components/lib/components/content';
 
-const ActivityCard = () =>
+const ActivityCard = props =>
+
 <Card>
-    <Card.Image size="4by3" src="http://bulma.io/images/placeholders/1280x960.png" />
+    <Card.Image size="4by3" src= {props.photo} />
     <Card.Content>
         <Media>
             <MediaItem renderAs="figure" position="left">
@@ -23,7 +24,7 @@ const ActivityCard = () =>
             </MediaItem>
             <MediaItem>
                 <Heading size={4}>
-                    John Smith
+                    {props.user}
                 </Heading>
                 <Heading subtitle size={6}>
                     @johnsmith
@@ -38,6 +39,7 @@ const ActivityCard = () =>
         </Content>
     </Card.Content>
 </Card>
+
 
 
 export default ActivityCard;
