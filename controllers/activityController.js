@@ -10,11 +10,11 @@ module.exports = {
       user: req.params.user
     }
 
-    console.log(`request query param = ${req.params.query}`);
+    console.log(`request user param = ${req.params.user}`);
     console.log("test", query);
 
     db.Activity
-      .find(query)
+      .find(req.query)
       // .find({ user: "abreaw@hotmail.com"})
       .sort({ createDate: -1 })
       .then(dbModel => res.json(dbModel))
