@@ -5,6 +5,7 @@ import ActivityCard from '../../components/ActivityCard';
 import Columns from 'react-bulma-components/lib/components/columns';
 import Column from 'react-bulma-components/lib/components/columns/components/column';
 import API from '../../utils/API';
+import TopBar from '../../components/TopBar';
 
 
 
@@ -31,6 +32,7 @@ class Dashboard extends Component {
   render() {
     console.log('this state ', this.state)
     return (
+      
       // <div className="App">
       // <div className="container">
       //   <Columns>
@@ -52,6 +54,7 @@ class Dashboard extends Component {
 
       <div className="App">
         <div className="container">
+        <TopBar/> 
           <Columns>
             {this.state.activities.length ? 
             <div>
