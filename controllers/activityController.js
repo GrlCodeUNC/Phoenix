@@ -1,18 +1,20 @@
+
+
 const db = require("../models");
 
 // Defining methods for the activityController
 module.exports = {
   findAll: function(req, res) {
 
-    // req.query = {
-    //     user: "miriam@hotmail.com"
-    // }
+    let query = {
+      user: req.params.user
+    }
 
-    console.log(`request query param = ${req.query}`);
-    console.log(req.query);
+    console.log(`request query param = ${req.params.query}`);
+    console.log("test", query);
 
     db.Activity
-      .find(req.query)
+      .find(query)
       // .find({ user: "abreaw@hotmail.com"})
       .sort({ createDate: -1 })
       .then(dbModel => res.json(dbModel))
