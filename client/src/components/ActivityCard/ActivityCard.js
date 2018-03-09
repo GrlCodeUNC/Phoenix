@@ -10,10 +10,8 @@ import Content from 'react-bulma-components/lib/components/content';
 
 const ActivityCard = props =>
 
-<Card key={activity.id}>
-{props.results.map(result =>
-    <div>
-    <Card.Image size="4by3" src="http://bulma.io/images/placeholders/1280x960.png" />
+<Card>
+    <Card.Image size="4by3" src= {props.photo} />
     <Card.Content>
         <Media>
             <MediaItem renderAs="figure" position="left">
@@ -26,7 +24,7 @@ const ActivityCard = props =>
             </MediaItem>
             <MediaItem>
                 <Heading size={4}>
-                    John Smith
+                    {props.user}
                 </Heading>
                 <Heading subtitle size={6}>
                     @johnsmith
@@ -40,8 +38,6 @@ const ActivityCard = props =>
             <time dateTime="2016-1-1">11:09 PM - 1 Jan 2016</time>
         </Content>
     </Card.Content>
-    </div>
-    )}
 </Card>
 
 

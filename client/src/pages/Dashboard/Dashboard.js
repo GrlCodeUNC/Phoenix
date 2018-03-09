@@ -10,24 +10,26 @@ import API from '../../utils/API';
 
 class Dashboard extends Component {
   state = {
-    search: "",
-    results: [] 
-  };
- 
+    user: "",
+    activities: []
+  }
+
 
   componentDidMount() {
-  this.loadActivity();
-}
-  
-loadactivities = () => {
-  API.getActivity()
-  .then(res =>
-      this.setState({results: res.data.data })
-  )
-  .catch(err => console.log(err));
-};
+    this.loadActivities();
+  }
 
-render() {
+  loadActivities = () => {
+    API.getAllActivities(this.state.user)
+      .then(res => {
+        console.log('res ', res)
+        this.setState({ activities: res.data })
+      })
+      .catch(err => console.log(err));
+  }
+
+  render() {
+    console.log('this state ', this.state)
     return (
       // <div className="App">
       // <div className="container">
@@ -49,17 +51,20 @@ render() {
       // </div>
 
       <div className="App">
-      <div className="container">
-        <Columns> 
-            {this.state.activites.length ? (
-            <Column>
-                <ActivityCard/> 
-            </Column>
-          ) : (
-            <h3>No Results to Display</h3>
-          )}
-        </Columns>
-      </div>
+        <div className="container">
+          <Columns>
+            {this.state.activities.length ? 
+            <div>
+                {this.state.activities.map((activity) => {
+                  console.log(activity)
+                  return <ActivityCard key={activity.id} {...activity}/> 
+                })}
+            </div>
+             :
+                <h3>No Activities to Display</h3>
+              }
+          </Columns>
+        </div>
       </div>
 
     );
