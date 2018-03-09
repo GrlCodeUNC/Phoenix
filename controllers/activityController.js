@@ -6,16 +6,16 @@ const db = require("../models");
 module.exports = {
   findAll: function(req, res) {
 
-    let query = {
-      user: req.params.user
-    }
-
-    console.log(`request user param = ${req.params.user}`);
-    console.log("test", query);
-
     db.Activity
       .find(req.query)
-      // .find({ user: "abreaw@hotmail.com"})
+      .sort({ createDate: -1 })
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  findByUser: function(req, res) {
+
+    db.Activity
+      .find({ user: req.params.user})
       .sort({ createDate: -1 })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));

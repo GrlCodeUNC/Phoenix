@@ -13,7 +13,10 @@ export default {
   // Gets the Activities associated with emails
   getActivityEmail: function(user) {
     console.log(user);
-    return axios.get("/api/activity/" + user);
+    const userQuery = "?user="+user;
+    return axios.get("/api/activity/user/"+user); // add in req.query details??
+    // return axios.get("/api/activity/" + user + "?user=" + user); // add in req.query details??
+    // return axios.get("/api/activity/" + user);
   },
   // Deletes the Activity with the given id
   deleteActivity: function(id) {
