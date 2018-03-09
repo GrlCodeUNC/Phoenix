@@ -16,6 +16,7 @@ router
 
 // Matches with "api/activity/:user"
 router
-  .route("/:user")
-  .get(activityController.findAll)
+  .route("/user/:user")
+  .get(activityController.findByUser);
+
 module.exports = router;
