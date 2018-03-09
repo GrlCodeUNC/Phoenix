@@ -5,6 +5,9 @@ import Container from 'react-bulma-components/lib/components/container';
 import Heading from 'react-bulma-components/lib/components/heading';
 import Button from 'react-bulma-components/lib/components/button';
 import Box from 'react-bulma-components/lib/components/box';
+import Field from 'react-bulma-components/lib/components/form/components/field';
+import Control from 'react-bulma-components/lib/components/form/components/control';
+import Input from 'react-bulma-components/lib/components/form/components/input';
 
 const TopBar = props =>
 
@@ -15,6 +18,11 @@ const TopBar = props =>
                 <Button>
                     New Activity
                 </Button>
+                <Field>
+                    <Control>
+                        <Input placeholder="Search" />
+                    </Control>
+                </Field>
             </Container>
         </Box>
     </Section>
