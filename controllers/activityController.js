@@ -17,7 +17,11 @@ module.exports = {
     db.Activity
       .find({ user: req.params.user})
       .sort({ createDate: -1 })
-      .then(dbModel => res.json(dbModel))
+      .then(dbModel => {
+        console.log("findByUser query completed");
+        console.log(dbModel);
+        return res.json(dbModel)
+      })
       .catch(err => res.status(422).json(err));
   },
   findById: function(req, res) {

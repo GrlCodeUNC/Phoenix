@@ -104,14 +104,15 @@ class GoogleLogin extends Component {
     localStorage.setItem("picture", res.profileObj.imageUrl);
 
     const userEmail = localStorage.getItem("email");
-    console.log(userEmail);
     
-    API.getActivityEmail(userEmail)
-    .then(function(response) {
-      console.log(response)
-    })
-      // .then(res => this.setState({ email: res.profileObj.email }))
-      .catch(err => console.log(err))
+    // need this to go to the dashboard component page and let
+    // the dashboard handle the data grab for display on that page
+    // API.getActivityEmail(userEmail)
+    // .then(function(response) {
+    //   console.log(response)
+    // })
+    //   // .then(res => this.setState({ email: res.profileObj.email }))
+    //   .catch(err => console.log(err))
   
 }
   
