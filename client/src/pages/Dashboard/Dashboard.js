@@ -28,11 +28,16 @@ class Dashboard extends Component {
 
 
   componentDidMount() {
+    
     this.loadActivities();
   }
 
   loadActivities = () => {
-    API.getAllActivities(this.state.user)
+
+    const userEmail = localStorage.getItem("email");
+    
+    // API.getAllActivities(this.state.user)
+    API.getActivityEmail(userEmail)
       .then(res => {
         console.log('res ', res)
         this.setState({ activities: res.data })
