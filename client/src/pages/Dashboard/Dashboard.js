@@ -19,13 +19,11 @@ import TopBar from '../../components/TopBar';
 //   </div>
 // );
 
-
 class Dashboard extends Component {
   state = {
     user: "",
     activities: []
   }
-
 
   componentDidMount() {
     
@@ -36,7 +34,6 @@ class Dashboard extends Component {
 
     const userEmail = localStorage.getItem("email");
     
-    // API.getAllActivities(this.state.user)
     API.getActivityEmail(userEmail)
       .then(res => {
         console.log('res ', res)
