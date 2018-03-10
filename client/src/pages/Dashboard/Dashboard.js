@@ -8,12 +8,13 @@ import Column from 'react-bulma-components/lib/components/columns/components/col
 import API from '../../utils/API';
 import TopBar from '../../components/TopBar';
 
-// const Wrapper = ({children}) => (
+// this is the start of an idea for getting the cards to show up in their own column
+// const displayActivites = ({activity}) => (
 //   <div>
 //     <Columns>
-//       <Column>{children}</Column>
-//       <Column>{children}</Column>
-//       <Column>{children}</Column>
+//       <Column>{activity}</Column>
+//       <Column>{activity}</Column>
+//       <Column>{activity}</Column>
 //     </Columns>
 //   </div>
 // );

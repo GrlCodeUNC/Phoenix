@@ -15,14 +15,14 @@ const ActivityCard = props =>
 
   
     <Card className="loadActivities">
-    <Card.Image size="4by3" src= {props.photo} />
-    <Card.Content>
-        <Content>
-            {props.plans}
-            <br />
-            <time>{props.createDate}</time>
-        </Content>
-    </Card.Content>
+        <Card.Image size="4by3" src= {props.photo} />
+            <Card.Content>
+                <Content>
+                 {props.plans}
+                    <br />
+                    <time>{props.createDate}</time>
+                </Content>
+            </Card.Content>
     </Card>
     
 
