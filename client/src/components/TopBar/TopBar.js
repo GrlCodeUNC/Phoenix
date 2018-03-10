@@ -8,6 +8,7 @@ import Box from 'react-bulma-components/lib/components/box';
 import Field from 'react-bulma-components/lib/components/form/components/field';
 import Control from 'react-bulma-components/lib/components/form/components/control';
 import Input from 'react-bulma-components/lib/components/form/components/input';
+import { Link } from "react-router-dom";
 
 const TopBar = props =>
 
@@ -15,9 +16,12 @@ const TopBar = props =>
     <Section>
         <Box>
             <Container>
+              <Link to={"/NewActivity"}>
                 <Button>
                     New Activity
                 </Button>
+              </Link>
+
                 <Field>
                     <Control>
                         <Input placeholder="Search" />
