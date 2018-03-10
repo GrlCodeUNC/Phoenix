@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "bulma/css/bulma.css";
 import Logo from "../../phoenix_logo.png";
 import "./PhoenixLogo.css";
+import Image from "react-bulma-components/lib/components/image";
 
 
 class PhoenixLogo extends Component {
@@ -14,8 +15,8 @@ class PhoenixLogo extends Component {
         } else if (this.props.location === 'dashboard') {
             cssClass = 'Logo-Dashboard'
         }
-        return (
-               <img src={Logo} className={cssClass} alt="logo" /> 
+        return (     
+            <Image src={Logo} className={cssClass} alt="logo" size="3by2" />
         )
     }
 }
