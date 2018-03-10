@@ -8,6 +8,7 @@ import Field from "react-bulma-components/lib/components/form/components/field";
 import Control from "react-bulma-components/lib/components/form/components/control";
 import Input from "react-bulma-components/lib/components/form/components/input";
 import Button from "react-bulma-components/lib/components/button";
+import Image from "react-bulma-components/lib/components/image";
 import "./NewActivity.css";
 import photoAPI from "../../utils/photoAPI";
 
@@ -29,8 +30,10 @@ class NewActivity extends Component {
     });
   };
 
-  createImgList = () => {
+  createImgList = event => {
 
+    event.preventDefault();
+    
     // console.log(this.state.keyword);
 
     photoAPI.getAllImages(this.state.keyword)
@@ -39,9 +42,11 @@ class NewActivity extends Component {
         const imgArray = imgResults.data.images
 
         console.log("image Array elements = ");
-        console.log(imgArray);
+        // console.log(imgArray);
 
         this.setState({ imgData: imgArray, keyword: "" });
+
+        console.log(this.state.imgData);
                 
       })
       .catch( err => console.log(err));
@@ -83,13 +88,13 @@ class NewActivity extends Component {
           </div>
           <div className="pictures has-text-centered">
             {this.state.imgData.map(image => (
-              <img
-                id={image.id}
-                key={image.id} 
-                alt={image.title} 
-                src={image.display_sizes[0].uri} 
-                onClick={this.goToActivityDetails(image.display_sizes[0].uri)}
-              />
+                <Image 
+                  id={image.id}
+                  key={image.id} 
+                  alt={image.title} 
+                  src={image.display_sizes[0].uri}
+                  onClick={() => this.goToActivityDetails(image.display_sizes[0].uri)} // this way it passes the function to be called w/ the event triggers
+                />
             ))}
           </div>
         </Container>
