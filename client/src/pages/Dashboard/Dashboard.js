@@ -7,13 +7,11 @@ import Column from 'react-bulma-components/lib/components/columns/components/col
 import API from '../../utils/API';
 
 
-
 class Dashboard extends Component {
   state = {
     user: "",
     activities: []
   }
-
 
   componentDidMount() {
     
@@ -24,7 +22,6 @@ class Dashboard extends Component {
 
     const userEmail = localStorage.getItem("email");
     
-    // API.getAllActivities(this.state.user)
     API.getActivityEmail(userEmail)
       .then(res => {
         console.log('res ', res)

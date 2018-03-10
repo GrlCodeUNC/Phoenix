@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "bulma/css/bulma.css";
-import GoogleButton from "../../components/GoogleButton";
+// import GoogleButton from "../../components/GoogleButton";
 import GoogleLogin from 'react-google-login';
 import Logo from "../../components/PhoenixLogo";
 
@@ -21,6 +21,11 @@ class Login extends Component {
       console.log("login success");
       this.setState({ loginSuccess: true, userEmail: response.profileObj.email });
       console.log(this.state);
+
+      localStorage.clear();
+      localStorage.setItem("name", response.profileObj.name);
+      localStorage.setItem("email", response.profileObj.email);
+      localStorage.setItem("picture", response.profileObj.imageUrl);
 
       window.location = "/Dashboard";
       

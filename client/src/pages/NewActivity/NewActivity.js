@@ -19,6 +19,7 @@ class NewActivity extends Component {
   };
 
   handleInputChange = event => {
+    event.preventDefault();
     // Getting the value and name of the input which triggered the change
     const { name, value } = event.target;
 
@@ -28,7 +29,7 @@ class NewActivity extends Component {
     });
   };
 
-  createImgList = imgKeyword => {
+  createImgList = () => {
 
     // console.log(this.state.keyword);
 
@@ -47,8 +48,15 @@ class NewActivity extends Component {
 
   };
 
-  render() {
+  goToActivityDetails = imgLink => {
 
+    console.log(imgLink);
+    localStorage.setItem("activityImageLink", imgLink);
+
+    window.location = "/Description";
+  };
+
+  render() {
 
     return (
       <Section>
@@ -78,7 +86,9 @@ class NewActivity extends Component {
               <img
                 id={image.id}
                 key={image.id} 
-                alt={image.title} src={image.display_sizes[0].uri} 
+                alt={image.title} 
+                src={image.display_sizes[0].uri} 
+                onClick={this.goToActivityDetails(image.display_sizes[0].uri)}
               />
             ))}
           </div>
