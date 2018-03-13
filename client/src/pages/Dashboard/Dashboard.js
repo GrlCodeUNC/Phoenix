@@ -7,6 +7,8 @@ import Columns from 'react-bulma-components/lib/components/columns';
 import Column from 'react-bulma-components/lib/components/columns/components/column';
 import API from '../../utils/API';
 import TopBar from '../../components/TopBar';
+import TimeLine from '../../components/TimeLine';
+import UserPhoto from '../../components/UserPhoto';
 
 // this is the start of an idea for getting the cards to show up in their own column
 // const displayActivites = ({activity}) => (
@@ -22,7 +24,8 @@ import TopBar from '../../components/TopBar';
 class Dashboard extends Component {
   state = {
     user: "",
-    activities: []
+    activities: [],
+    timeLineDates: []
   }
 
   componentDidMount() {
@@ -30,14 +33,20 @@ class Dashboard extends Component {
     this.loadActivities();
   }
 
+
   loadActivities = () => {
 
     const userEmail = localStorage.getItem("email");
     
     API.getActivityEmail(userEmail)
       .then(res => {
-        console.log('res ', res)
-        this.setState({ activities: res.data })
+        // console.log('res ', res);
+        let newTimeArray = [];
+        res.data.forEach((activity) => {
+          newTimeArray.push(activity.completeDate);
+        });
+        // console.log(newTimeArray);
+        this.setState({ activities: res.data, timeLineDates: newTimeArray });
       })
       .catch(err => console.log(err));
   }
@@ -65,7 +74,7 @@ class Dashboard extends Component {
       // </div>
       // </div>
 
-      <div className="App">
+      // <div className="App">
         <div className="container">
         <TopBar/> 
        
@@ -81,25 +90,27 @@ class Dashboard extends Component {
          */}
 
 
-            <Columns>
+            <Columns breakpoint="mobile">
               <Column className="is-one-quarter">
+                <UserPhoto/>
               </Column>
-              <Column>
+              <Column className="auto">
+                <TimeLine dates={this.state.timeLineDates} />
                 {this.state.activities.length ?
-                <div>
-                    {this.state.activities.map((activity) => {
+                      this.state.activities.map((activity) => {
                       console.log(activity)
                       return <ActivityCard key={activity.id} {...activity}/> 
-                    })}
-                </div>
-                :
+                      })
+               :
+                  <Column>
                     <h3>No Activities to Display</h3>
+                  </Column>
                   }
-              </Column>
+                </Column>
             </Columns>  
          
         </div>
-      </div>
+      // </div>
 
     );
   }
