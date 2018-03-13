@@ -11,6 +11,7 @@ import Button from "react-bulma-components/lib/components/button";
 import Image from "react-bulma-components/lib/components/image";
 import "./NewActivity.css";
 import photoAPI from "../../utils/photoAPI";
+import Card from "react-bulma-components/lib/components/card";
 
 class NewActivity extends Component {
 
@@ -65,7 +66,7 @@ class NewActivity extends Component {
 
     return (
       <Section>
-        <Container default className="NewActivity">
+        {/* <Container default className="NewActivity"> */}
           <div className="title has-text-centered">
             <Heading size={5} renderAs="p">
               New Activity
@@ -88,7 +89,7 @@ class NewActivity extends Component {
           </div>
           <div className="pictures has-text-centered">
             {this.state.imgData.map(image => (
-                <Image 
+                <Image className="imageCard image is-128x128"
                   id={image.id}
                   key={image.id} 
                   alt={image.title} 
@@ -97,7 +98,7 @@ class NewActivity extends Component {
                 />
             ))}
           </div>
-        </Container>
+        {/* </Container> */}
       </Section>
     );
   }

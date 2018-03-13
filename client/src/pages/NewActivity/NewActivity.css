@@ -1,7 +1,7 @@
 .NewActivity {
     background-color: lightgrey;
-    width: 700px;
-    height: 700px;
+    /* width: 700px;
+    height: 700px; */
 }
 
 .title {
@@ -9,14 +9,48 @@
 }
 
 .keyword {
-    padding: 50px;
-    margin: 50px;
+    padding: 30px;
+    margin: 30px;
 }
 
 .pictures {
     background-color: white;
-    padding: 50px;
-    margin: 50px;
-    height: 300px;
+    padding: 10px;
+    margin: 30px;
+    /* height: 300px; */
+    
+}
+
+.imageCard {
+    /* height: auto;
+    width: 50%;
+    padding-top: 20px;
+    /* background: #ECEFF1;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 20px;
+    justify-content: space-around;
+    align-content: flex-start;
+    overflow: auto; */
+
+    background: #fff;
+    /* display: inline-flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    overflow: auto;  */
+    overflow: hidden;
+    display: inline-block;
+
+    border-radius: 2px;
+    /* height: 325px; */
+    height: 160px;
+    margin: 1rem;
+    /* padding: 5px; */
+    /* position: relative; */
+    /* width: 325px; */
+    width: 160px;
+    box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+    text-align: left;
     
 }
