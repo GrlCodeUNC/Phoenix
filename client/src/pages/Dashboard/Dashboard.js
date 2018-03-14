@@ -9,6 +9,7 @@ import API from '../../utils/API';
 import TopBar from '../../components/TopBar';
 import TimeLine from '../../components/TimeLine';
 import UserPhoto from '../../components/UserPhoto';
+import moment from "moment";
 
 // this is the start of an idea for getting the cards to show up in their own column
 // const displayActivites = ({activity}) => (
@@ -43,7 +44,10 @@ class Dashboard extends Component {
         // console.log('res ', res);
         let newTimeArray = [];
         res.data.forEach((activity) => {
-          newTimeArray.push(activity.completeDate);
+          const completeDate = moment(activity.completeDate);
+          const formatted = completeDate.format('MMMM Do YYYY');
+          console.log(formatted);
+          newTimeArray.push(formatted);
         });
         // console.log(newTimeArray);
         this.setState({ activities: res.data, timeLineDates: newTimeArray });
