@@ -44,10 +44,7 @@ class Dashboard extends Component {
         // console.log('res ', res);
         let newTimeArray = [];
         res.data.forEach((activity) => {
-          const completeDate = moment(activity.completeDate);
-          const formatted = completeDate.format('MMMM Do YYYY');
-          console.log(formatted);
-          newTimeArray.push(formatted);
+          newTimeArray.push(activity.completeDate);
         });
         // console.log(newTimeArray);
         this.setState({ activities: res.data, timeLineDates: newTimeArray });
