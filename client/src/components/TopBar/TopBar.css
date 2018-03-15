@@ -8,10 +8,15 @@
 
 .button {
     margin-right: 10px;
+    background-color: #ffc8aa;
+    color: white;
+    border: none;
+    
 }
 
 .navbar {
     float: right;
+    
 }
 
 .section{
