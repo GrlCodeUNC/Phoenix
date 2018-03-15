@@ -4,9 +4,20 @@
 
  .search {
     width: 100%;
-
 } 
+
+.button {
+    margin-right: 10px;
+}
 
 .navbar {
     float: right;
+}
+
+.section{
+    font-family: 'Nunito', sans-serif;
+}
+
+.field {
+    font-family: 'Nunito', sans-serif;
 }

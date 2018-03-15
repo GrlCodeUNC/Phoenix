@@ -11,12 +11,14 @@ import Control from 'react-bulma-components/lib/components/form/components/contr
 import Input from 'react-bulma-components/lib/components/form/components/input';
 import Navbar from 'react-bulma-components/lib/components/navbar';
 import { Link } from "react-router-dom";
+import Fonts from "../../../node_modules/google-fonts";
 
 const TopBar = props =>
 
 <div>
     <Section>
         
+        <Container>
         <Navbar>
               <Link to={"/NewActivity"}>
                 <Button>
@@ -30,6 +32,7 @@ const TopBar = props =>
                     </Control>
                 </Field>
         </Navbar>
+        </Container>
         
     </Section>
 </div>
