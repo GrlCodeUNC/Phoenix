@@ -5,7 +5,7 @@ import './Login.css';
 // import GoogleButton from "../../components/GoogleButton";
 import GoogleLogin from 'react-google-login';
 import Logo from "../../components/PhoenixLogo";
-import fadeIn from 'react-animations/lib/fade-in'
+
 
 class Login extends Component {
   
