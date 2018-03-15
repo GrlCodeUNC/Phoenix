@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "bulma/css/bulma.css";
+import './Login.css';
 // import GoogleButton from "../../components/GoogleButton";
 import GoogleLogin from 'react-google-login';
 import Logo from "../../components/PhoenixLogo";
+import fadeIn from 'react-animations/lib/fade-in'
 
 class Login extends Component {
   
@@ -41,11 +43,14 @@ class Login extends Component {
 
 
   }
+
   
   render() {
     return (
       <div className="has-text-centered">
+       
         <Logo location='login'/>
+       
         <GoogleLogin 
           clientId="1071904739843-5tl56tqp05ap4td8gsahf9uj0nrkrvhu.apps.googleusercontent.com"
           buttonText="Login with Google"
