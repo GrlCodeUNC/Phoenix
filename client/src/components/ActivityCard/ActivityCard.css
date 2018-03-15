@@ -21,12 +21,12 @@
 
     border-radius: 2px;
     /* height: 325px; */
-    height: 230px;
+    height: 250px;
     margin: 1rem;
     /* padding: 5px; */
     /* position: relative; */
     /* width: 325px; */
-    width: 230px;
+    width: 250px;
     box-shadow: 0 3px 6px #999, 0 3px 6px #999;
     text-align: left;
     
@@ -38,4 +38,11 @@
     padding: 10px;
 
 
+}
+
+.deleteRightAlign {
+
+    position: absolute; 
+    right: 0;
+    margin-right: 5px;
 }
