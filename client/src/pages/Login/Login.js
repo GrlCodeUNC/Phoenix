@@ -64,6 +64,8 @@ class Login extends Component {
           onSuccess={this.responseGoogle}
           onFailure={this.responseGoogle}
         />
+
+        <h5 className="visualize">Visualize your bucket list dreams and reach them with Phoenix!</h5>
         {/* {this.state.loginSuccess ? <Link to="/Dashboard" /> : <Link to="/Login" />} */}
         {/* <GoogleButton /> */}
         {/* <GoogleButton onClick={() => this.goToDashboard} /> */}

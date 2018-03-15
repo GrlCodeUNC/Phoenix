@@ -4,7 +4,7 @@ import 'bulma/css/bulma.css';
 
 const UserPhoto = props => {
 
-return(<h1 src={localStorage.getItem("user")}/>) 
+return(<h1 src={localStorage.getItem("name")}/>) 
 
 }
 

@@ -76,7 +76,7 @@ class Dashboard extends Component {
       <div className="container">
         
         <Columns breakpoint="mobile">
-          <Column className="is-one-quarter">
+          <Column className="is-one-quarter sideBar" >
             <UserPhoto/>
             <TopBar/> 
          </Column>
