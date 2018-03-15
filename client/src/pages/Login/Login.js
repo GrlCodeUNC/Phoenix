@@ -42,12 +42,6 @@ class Login extends Component {
     }
   }
   
-  // goToDashboard = user => {
-  //   // do we need this to move to the dashboard page??
-
-
-  // }
-  
   render() {
     return (
       <div className="has-text-centered">
