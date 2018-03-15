@@ -1,12 +1,13 @@
 import React, { Component } from "react";
-import { Route, Redirect } from 'react-router';
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import "bulma/css/bulma.css";
 // import GoogleButton from "../../components/GoogleButton";
 import GoogleLogin from 'react-google-login';
 import Logo from "../../components/PhoenixLogo";
 
 class Login extends Component {
+
+// const Login = (props) => {
   
   // do we need state here to check if login has happened or not?
   // How do we handle getting to the next page from here?
@@ -20,6 +21,7 @@ class Login extends Component {
 
     if (response.profileObj) {
       console.log("login success");
+      
       this.setState({ loginSuccess: true, userEmail: response.profileObj.email });
       console.log(this.state);
 
@@ -29,18 +31,15 @@ class Login extends Component {
       localStorage.setItem("picture", response.profileObj.imageUrl);
 
       window.location = "/Dashboard";
+      // return (
+      //   <Redirect to='/Dashboard' />
+      // );
       
     }
     else {
       console.log("login failed")
       console.log(response.error);
     }
-  }
-  
-  goToDashboard = user => {
-    // do we need this to move to the dashboard page??
-
-
   }
   
   render() {
