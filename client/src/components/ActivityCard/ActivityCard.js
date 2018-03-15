@@ -11,10 +11,10 @@ import Image from 'react-bulma-components/lib/components/image';
 import Content from 'react-bulma-components/lib/components/content';
 // import Columns from 'react-bulma-components/lib/components/columns';
 // import Column from 'react-bulma-components/lib/components/columns/components/column';
+import Masonry from 'react-masonry-component';
 
 
 const ActivityCard = props => (
-  
   <Card className="loadActivities">
     <Card.Header>
         <Card.Header.Title>
@@ -34,6 +34,7 @@ const ActivityCard = props => (
     </Card.Content>
   </Card>
  
+ 
 );
-    
+
 export default ActivityCard;

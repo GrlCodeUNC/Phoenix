@@ -20,7 +20,7 @@ const TopBar = props =>
             <Navbar>
               <Link to={"/NewActivity"}>
                 <Button>
-                    New Activity
+                    +
                 </Button>
               </Link>
 
