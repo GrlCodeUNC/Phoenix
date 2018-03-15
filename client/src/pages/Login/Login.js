@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Route, Redirect } from 'react-router';
 import { Link } from "react-router-dom";
 import "bulma/css/bulma.css";
 // import GoogleButton from "../../components/GoogleButton";
@@ -52,11 +53,6 @@ class Login extends Component {
           onSuccess={this.responseGoogle}
           onFailure={this.responseGoogle}
         />
-        {/* <GoogleButton /> */}
-        {/* <GoogleButton onClick={() => this.goToDashboard} /> */}
-        {/* <Link to="/Dashboard">
-          <GoogleButton />
-        </Link> */}
       </div>
     );
   }
