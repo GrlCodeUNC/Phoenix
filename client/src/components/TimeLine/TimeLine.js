@@ -4,7 +4,7 @@ import HorizontalTimeline from "react-horizontal-timeline";
 
 const TimeLine = props =>
 
-<div>
+<div className="timeline">
     {/* Bounding box for the Timeline */}
         <div style={{ width: '90%', height: '80px', margin: '0 auto' }}>
             <HorizontalTimeline

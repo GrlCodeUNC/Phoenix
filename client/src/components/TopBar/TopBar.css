@@ -1,6 +1,4 @@
-.box {
-    background-color: #ffc8aa;
-}
+
 
  .search {
     width: 100%;
@@ -11,7 +9,6 @@
     background-color: #ffc8aa;
     color: white;
     border: none;
-    
 }
 
 .navbar {
@@ -20,9 +17,9 @@
 }
 
 .section{
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Varela Round', sans-serif;
 }
 
 .field {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Varela Round', sans-serif;
 }

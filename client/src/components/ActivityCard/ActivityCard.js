@@ -12,7 +12,9 @@ import Content from 'react-bulma-components/lib/components/content';
 // import Columns from 'react-bulma-components/lib/components/columns';
 // import Column from 'react-bulma-components/lib/components/columns/components/column';
 
+
 const ActivityCard = props => (
+  
   <Card className="loadActivities">
     <Card.Header>
         <Card.Header.Title>
@@ -23,12 +25,15 @@ const ActivityCard = props => (
     <Card.Image size="3by2" src={props.photo} />
     <Card.Content className="cardDetails">
       <Content>
-        {/* {props.plans}
-        <br /> */}
-        <time>Get it Done: {moment(props.completeDate).format('MMMM Do YYYY')}</time>
+        <div className="timeInfo">
+          <time>Get it Done: {moment(props.completeDate).format('MMMM Do YYYY')}</time>
+        </div>
+        <br /> 
+        {props.plans}
       </Content>
     </Card.Content>
   </Card>
+ 
 );
     
 export default ActivityCard;
