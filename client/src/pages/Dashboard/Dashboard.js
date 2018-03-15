@@ -38,6 +38,8 @@ class Dashboard extends Component {
   loadActivities = () => {
 
     const userEmail = localStorage.getItem("email");
+    // const userEmail = "abreaw@hotmail.com"; // testing no activities returned
+    
     
     API.getActivityEmail(userEmail)
       .then(res => {
@@ -96,7 +98,11 @@ class Dashboard extends Component {
                 <UserPhoto/>
               </Column>
               <Column className="auto">
-                <TimeLine dates={this.state.timeLineDates} />
+                {this.state.timeLineDates.length ? 
+                  <TimeLine dates={this.state.timeLineDates} />
+                :
+                  <h3>Add some new activities to start</h3>
+                }
                 {this.state.activities.length ?
                       this.state.activities.map((activity) => {
                       console.log(activity)
