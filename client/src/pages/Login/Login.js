@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import { Link, Redirect } from "react-router-dom";
 import "bulma/css/bulma.css";
+import './Login.css';
 // import GoogleButton from "../../components/GoogleButton";
 import GoogleLogin from 'react-google-login';
 import Logo from "../../components/PhoenixLogo";
+
 
 class Login extends Component {
 
@@ -42,16 +44,28 @@ class Login extends Component {
     }
   }
   
+
+  goToDashboard = user => {
+    // do we need this to move to the dashboard page??
+
+
+  }
+
+
   render() {
     return (
       <div className="has-text-centered">
+       
         <Logo location='login'/>
+       
         <GoogleLogin 
           clientId="1071904739843-5tl56tqp05ap4td8gsahf9uj0nrkrvhu.apps.googleusercontent.com"
           buttonText="Login with Google"
           onSuccess={this.responseGoogle}
           onFailure={this.responseGoogle}
         />
+
+        <h5 className="visualize">Visualize your bucket list dreams and reach them with Phoenix!</h5>
         {/* {this.state.loginSuccess ? <Link to="/Dashboard" /> : <Link to="/Login" />} */}
         {/* <GoogleButton /> */}
         {/* <GoogleButton onClick={() => this.goToDashboard} /> */}

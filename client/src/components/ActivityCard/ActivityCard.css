@@ -10,7 +10,6 @@
     justify-content: space-around;
     align-content: flex-start;
     overflow: auto; */
-
     background: #fff;
     /* display: inline-flex;
     flex-flow: row wrap;
@@ -18,31 +17,37 @@
     overflow: auto;  */
     overflow: hidden;
     display: inline-block;
-
     border-radius: 2px;
     /* height: 325px; */
-    height: 250px;
+    /* height: 250px; */
     margin: 1rem;
     /* padding: 5px; */
     /* position: relative; */
     /* width: 325px; */
-    width: 250px;
+    width: 240px;
     box-shadow: 0 3px 6px #999, 0 3px 6px #999;
     text-align: left;
     
 }
 
 .cardDetails {
-
     overflow: hidden;
     padding: 10px;
-
-
 }
 
 .deleteRightAlign {
-
     position: absolute; 
     right: 0;
     margin-right: 5px;
+}
+
+.content {
+    padding: 10px;
+}
+.card {
+    font-family: 'Varela Round', sans-serif;
+}
+
+.timeInfo {
+    font-family: 'Varela Round', sans-serif;
 }
