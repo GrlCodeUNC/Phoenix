@@ -21,3 +21,4 @@ class PhoenixLogo extends Component {
 }
 
 export default PhoenixLogo;
+
