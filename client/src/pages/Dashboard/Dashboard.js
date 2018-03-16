@@ -74,7 +74,7 @@ class Dashboard extends Component {
         
         <Columns breakpoint="mobile">
           
-            <Column className="is-one-quarter">
+            <Column className="is-one-quarter" style={{backgroundColor: "#efefef"}}>
             {/* adding breaks because nothing else is working!! */}
             <br/>
             <br/>
@@ -82,7 +82,7 @@ class Dashboard extends Component {
             <br/>
             <br/>
               <UserPhoto/>
-              <UserName />
+              <UserName/>
               <TopBar/> 
             </Column>
         

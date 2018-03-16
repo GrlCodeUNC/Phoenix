@@ -24,11 +24,11 @@ const TopBar = props =>
                 </Button>
               </Link>
 
-                <Field>
+                {/* <Field>
                     <Control>
                         <Input placeholder="Search" className="search"/>
                     </Control>
-                </Field>
+                </Field> */}
             </div>
     </Section>
 </div>
