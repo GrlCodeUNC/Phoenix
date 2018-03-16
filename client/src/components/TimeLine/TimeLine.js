@@ -13,10 +13,11 @@ const TimeLine = props =>
                     console.log(props.dates);
                 }}
                 labelWidth={ 120 }
-                values={ props.dates } />
+                values={ props.dates }
+                styles={{ foreground: '#bf431d', outline: '#dfdfdf' }} />
         </div>
         <div className='is-size-5 has-text-danger has-text-centered'>
-            Get Busy Living ... Phoenix Style!
+            {/* Get Busy Living ... Phoenix Style! */}
         </div>
 </div>
     
