@@ -98,22 +98,6 @@ class GoogleLogin extends Component {
       email: basicProfile.getEmail(),
       name: basicProfile.getName()
     }
-    localStorage.clear();
-    localStorage.setItem("name", res.profileObj.name);
-    localStorage.setItem("email", res.profileObj.email);
-    localStorage.setItem("picture", res.profileObj.imageUrl);
-
-    const userEmail = localStorage.getItem("email");
-    
-    // need this to go to the dashboard component page and let
-    // the dashboard handle the data grab for display on that page
-    // API.getActivityEmail(userEmail)
-    // .then(function(response) {
-    //   console.log(response)
-    // })
-    //   // .then(res => this.setState({ email: res.profileObj.email }))
-    //   .catch(err => console.log(err))
-  
 }
   
   render() {
@@ -152,32 +136,6 @@ class GoogleLogin extends Component {
     return googleLoginButton
   }
 }
-
-// GoogleLogin.propTypes = {
-//   onSuccess: PropTypes.func.isRequired,
-//   onFailure: PropTypes.func.isRequired,
-//   clientId: PropTypes.string.isRequired,
-//   onRequest: PropTypes.func,
-//   buttonText: PropTypes.string,
-//   scope: PropTypes.string,
-//   className: PropTypes.string,
-//   redirectUri: PropTypes.string,
-//   loginHint: PropTypes.string,
-//   hostedDomain: PropTypes.string,
-//   children: PropTypes.node,
-//   style: PropTypes.object,
-//   disabledStyle: PropTypes.object,
-//   fetchBasicProfile: PropTypes.bool,
-//   prompt: PropTypes.string,
-//   tag: PropTypes.string,
-//   autoLoad: PropTypes.bool,
-//   disabled: PropTypes.bool,
-//   discoveryDocs: PropTypes.array,
-//   uxMode: PropTypes.string,
-//   isSignedIn: PropTypes.bool,
-//   responseType: PropTypes.string,
-//   type: PropTypes.string
-// }
 
 GoogleLogin.defaultProps = {
   type: 'button',
