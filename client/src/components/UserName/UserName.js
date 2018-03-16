@@ -2,12 +2,12 @@ import React, { Component } from "react";
 import 'bulma/css/bulma.css';
 
 
-const UserPhoto = props => {
+
+const UserName = props => {
 
 return(<h1 src={localStorage.getItem("name")}/>) 
 
 }
 
 
-
-export default UserPhoto;
+export default UserName;
