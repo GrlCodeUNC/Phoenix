@@ -26,7 +26,6 @@ class Dashboard extends Component {
     this.loadActivities();
   }
 
-
   loadActivities = () => {
 
     const userEmail = localStorage.getItem("email");
@@ -76,6 +75,7 @@ class Dashboard extends Component {
         <Columns breakpoint="mobile">
           <Column className="is-one-quarter sideBar" >
             <UserPhoto/>
+            <UserName />
             <TopBar/> 
          </Column>
           <Column className="auto">

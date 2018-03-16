@@ -65,6 +65,7 @@ class Login extends Component {
           onFailure={this.responseGoogle}
         />
 
+
         <h5 className="visualize">Visualize your bucket list dreams and reach them with Phoenix!</h5>
         {/* {this.state.loginSuccess ? <Link to="/Dashboard" /> : <Link to="/Login" />} */}
         {/* <GoogleButton /> */}
@@ -72,6 +73,7 @@ class Login extends Component {
         {/* <Link to="/Dashboard">
           <GoogleButton />
         </Link> */}
+
       </div>
     );
   }
