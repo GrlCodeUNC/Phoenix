@@ -66,13 +66,13 @@ class NewActivity extends Component {
 
     return (
       <Section>
-        {/* <Container default className="NewActivity"> */}
-          <div className="title has-text-centered">
-            <Heading size={5} renderAs="p">
+        <Container default className="NewActivity">
+       
+          <Heading className="title has-text-centered">
               New Activity
             </Heading>
-          </div>
-          <div className="keyword has-text-centered">
+     
+          <div className="keyword has-text-centered round">
             <Field>
               <Control>
                 <Input placeholder="Keyword..." 
@@ -82,14 +82,15 @@ class NewActivity extends Component {
                    type="text"
                 />
               </Control>
-              <Button onClick={this.createImgList}>
+              <Button className="button" onClick={this.createImgList}>
                 Search
               </Button>
             </Field>
           </div>
+        </Container>
           <div className="pictures has-text-centered">
             {this.state.imgData.map(image => (
-                <Image className="imageCard image is-128x128"
+                <Image className="imageCard image is-200x200"
                   id={image.id}
                   key={image.id} 
                   alt={image.title} 
