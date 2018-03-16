@@ -17,7 +17,7 @@ const TopBar = props =>
 
 <div>
     <Section>
-            <Navbar>
+            <div className="searchBar">
               <Link to={"/NewActivity"}>
                 <Button>
                     +
@@ -29,7 +29,7 @@ const TopBar = props =>
                         <Input placeholder="Search" className="search"/>
                     </Control>
                 </Field>
-            </Navbar>
+            </div>
     </Section>
 </div>
 
