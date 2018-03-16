@@ -2,14 +2,17 @@ import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import 'bulma/css/bulma.css';
 import ActivityCard from '../../components/ActivityCard';
-import Wrapper from '../../components/Wrapper';
 import Columns from 'react-bulma-components/lib/components/columns';
 import Column from 'react-bulma-components/lib/components/columns/components/column';
 import API from '../../utils/API';
 import TopBar from '../../components/TopBar';
 import TimeLine from '../../components/TimeLine';
 import UserPhoto from '../../components/UserPhoto';
+import UserName from '../../components/UserName';
 import moment from "moment";
+import Section from 'react-bulma-components/lib/components/section';
+
+
 
 class Dashboard extends Component {
   state = {
@@ -65,19 +68,24 @@ class Dashboard extends Component {
   render() {
     console.log('this state ', this.state)
     return (
-      
+
+ 
+       
+  
+
       <div className="container">
-        <TopBar/> 
+        
         <Columns breakpoint="mobile">
-          <Column className="is-one-quarter">
+          <Column className="is-one-quarter sideBar" >
             <UserPhoto/>
-          </Column>
+            <TopBar/> 
+         </Column>
           <Column className="auto">
-            {this.state.timeLineDates.length ? 
-              <TimeLine dates={this.state.timeLineDates} activities={this.state.activities}/>
-            :
-              <h3>Add new activities to start your Phoenix Life</h3>
-            }
+              {this.state.timeLineDates.length ? 
+                  <TimeLine dates={this.state.timeLineDates} activities={this.state.activities}/>
+                :
+                  <h3>Add new activities to start your Phoenix Life</h3>
+              }
             {this.state.activities.length ?
               this.state.activities.map((activity) => {
               console.log(activity)
