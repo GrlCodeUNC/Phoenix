@@ -70,7 +70,7 @@ class NewActivity extends Component {
        
           <Heading className="title has-text-centered">
               New Activity
-            </Heading>
+          </Heading>
      
           <div className="keyword has-text-centered round">
             <Field>
