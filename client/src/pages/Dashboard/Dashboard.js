@@ -66,6 +66,7 @@ class Dashboard extends Component {
 
   render() {
     console.log('this state ', this.state)
+    console.log(localStorage.getItem("name"));
     return (
      
   
@@ -75,7 +76,8 @@ class Dashboard extends Component {
         <Columns breakpoint="mobile">
           <Column className="is-one-quarter sideBar" >
             <UserPhoto/>
-            <UserName />
+            <input src={localStorage.getItem("name")} />
+            {/* <UserName /> */}
             <TopBar/> 
          </Column>
           <Column className="auto">
