@@ -17,6 +17,9 @@ import Section from 'react-bulma-components/lib/components/section';
 class Dashboard extends Component {
   state = {
     user: "",
+    // upcomingActivityDate: moment(),
+    // overdueActivityDate: moment(),
+    // currentDate: moment(),
     activities: [],
     timeLineDates: []
   }
@@ -41,24 +44,84 @@ class Dashboard extends Component {
         });
         // console.log(newTimeArray);
         this.setState({ activities: res.data, timeLineDates: newTimeArray });
+
+        // var overdueDates
+        // this.state.activities.forEach(activity => {
+        //   const dateFormatted = moment(activity.completeDate);
+        //   const currentDate = moment();
+        //   const timeframeDate = moment().add(14, "days");
+          
+        //   console.log(dateFormatted);
+        //   console.log(currentDate);
+        //   console.log(timeframeDate);
+
+        //   if (dateFormatted <= currentDate) {
+        //     console.log("date overdue");
+
+
+        //   } else {
+        //     // console.log("does this even work??");
+        //     if (dateFormatted > currentDate && dateFormatted <= timeframeDate ) {
+        //       console.log("between the current date and the timeframe to complete");
+        //     } else {
+        //       console.log("this should be greater than the timeframeDate");
+        //     }
+        //   }
+
+          // if (dateFormatted > currentDate && dateFormatted <= timeframeDate ) {
+          //   console.log("between the current date and the timeframe to complete");
+          // } else {
+          //   console.log("this should be greater than the timeframeDate");
+          // }
+        // });
       })
       .catch(err => console.log(err));
   }
 
+  checkDates = (activity) => {
+
+    console.log("checkDate running");
+
+    const dateFormatted = moment(activity.completeDate);
+    const currentDate = moment();
+    const timeframeDate = moment().add(14, "days");
+    
+    console.log(dateFormatted);
+    console.log(currentDate);
+    console.log(timeframeDate);
+
+    if (dateFormatted <= currentDate) {
+      console.log("date overdue");
+
+      // className doesn't work
+      // return (<ActivityCard className="overdue" removeActivity={this.removeActivity} key={activity._id} {...activity}/>)
+      return (<ActivityCard overdue={true} removeActivity={this.removeActivity} key={activity._id} {...activity}/>)
+
+    } else {
+      // console.log("does this even work??");
+      if (dateFormatted > currentDate && dateFormatted <= timeframeDate ) {
+        console.log("between the current date and the timeframe to complete");
+        return (<ActivityCard getItDone={true} removeActivity={this.removeActivity} key={activity._id} {...activity}/>)
+      } else {
+        console.log("this should be greater than the timeframeDate");
+        return (<ActivityCard stillTime={true} removeActivity={this.removeActivity} key={activity._id} {...activity}/>)
+      }
+    }
+
+
+  }
+
   removeActivity = (id) => {
 
-    console.log(`delete activity triggered ${id}`);
+    // console.log(`delete activity triggered ${id}`);
 
     API.deleteActivity(id)
       .then(res => {
 
-        console.log('res ', res);
+        // console.log('res ', res);
 
         this.loadActivities();
-        // // Filter this.state.activities for activities with an id not equal to the id being removed
-        // const activities = this.state.activities.filter(activity => activity._id !== id);
-        // // Set this.state.activities equal to the new activities array
-        // this.setState({ activities });
+
       })
       .catch(err => console.log(err));
 
@@ -69,28 +132,41 @@ class Dashboard extends Component {
     console.log(localStorage.getItem("name"));
     return (
      
-  
-
       <div className="container">
         
         <Columns breakpoint="mobile">
-          <Column className="is-one-quarter sideBar" >
-            <UserPhoto/>
-            <input src={localStorage.getItem("name")} />
-            {/* <UserName /> */}
-            <TopBar/> 
-         </Column>
+          
+            <Column className="is-one-quarter" style={{backgroundColor: "#efefef"}}>
+            {/* adding breaks because nothing else is working!! */}
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+              <UserPhoto/>
+              <UserName/>
+              <TopBar/> 
+            </Column>
+        
           <Column className="auto">
+              <br/>
               {this.state.timeLineDates.length ? 
                   <TimeLine dates={this.state.timeLineDates} activities={this.state.activities}/>
                 :
                   <h3>Add new activities to start your Phoenix Life</h3>
               }
+              <br/>
+              <br/>
+
             {this.state.activities.length ?
               this.state.activities.map((activity) => {
-              console.log(activity)
-              return <ActivityCard removeActivity={this.removeActivity} key={activity._id} {...activity}/>
+              // console.log(activity)
+              // return <ActivityCard removeActivity={this.removeActivity} key={activity._id} {...activity}/>
+              return this.checkDates(activity)
               })
+              // this.state.activities.forEach((activity) => {
+              //   return this.checkDates(activity)
+              // })
             :
               <Column>
                 <h3>No Activities to Display</h3>
