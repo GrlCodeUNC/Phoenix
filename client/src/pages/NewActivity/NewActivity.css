@@ -22,12 +22,12 @@ body {
     margin-left: 200px;
 }
 
-.button {
+.searchButton {
     margin-top: 30px;
     color: #bf431d;
 }
 
-.button.is-white {
+.searchButton.is-white {
     color: #bf431d;
 }
 

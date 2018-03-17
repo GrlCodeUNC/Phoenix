@@ -82,7 +82,7 @@ class NewActivity extends Component {
                    type="text"
                 />
               </Control>
-              <Button color="white" className="button" onClick={this.createImgList}>
+              <Button color="white" className="searchButton" onClick={this.createImgList}>
                 Search
               </Button>
             </Field>
