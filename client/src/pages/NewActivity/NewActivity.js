@@ -12,6 +12,7 @@ import Image from "react-bulma-components/lib/components/image";
 import "./NewActivity.css";
 import photoAPI from "../../utils/photoAPI";
 import Card from "react-bulma-components/lib/components/card";
+import Word from '../../components/PhoenixWord';
 
 class NewActivity extends Component {
 
@@ -99,7 +100,11 @@ class NewActivity extends Component {
                 />
             ))}
           </div>
-        {/* </Container> */}
+
+          <div>
+            <Word location='newActivity'/>
+          </div>
+       
       </Section>
     );
   }
