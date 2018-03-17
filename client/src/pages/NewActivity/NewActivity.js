@@ -103,7 +103,7 @@ class NewActivity extends Component {
           <div>
             <Word location='newActivity'/>
           </div>
-  
+        </Container>      
       </Section>
     );
   }
