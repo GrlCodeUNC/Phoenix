@@ -1,19 +1,22 @@
-body {
+/* body {
     font-family: 'Varela Round', sans-serif;
-}
+} */
 
 .NewActivity {
     background-color: #ffc8aa;
+    width: 60%;
     border-radius: 25px;
-    /* width: 700px;
-    height: 700px; */
 }
+
+/* .box {
+     border-radius: 25px;
+} */
 
 .title {
     padding: 20px;
     font-size: 50px;
     color: grey;
-    font-family: 'Varela Round', sans-serif;
+    /* font-family: 'Varela Round', sans-serif; */
 }
 
 .keyword {
@@ -34,9 +37,13 @@ body {
 .pictures {
     background-color: white;
     padding: 10px;
-    margin: 30px;
-    /* height: 300px; */
-    
+    margin-top: 30px;
+    /* height: 300px; */   
+}
+
+.size {
+    margin-right: 100px;
+    margin-left: 100px;
 }
 
 .imageCard {
