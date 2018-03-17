@@ -12,6 +12,7 @@ import Image from "react-bulma-components/lib/components/image";
 import "./NewActivity.css";
 import photoAPI from "../../utils/photoAPI";
 import Card from "react-bulma-components/lib/components/card";
+import Word from '../../components/PhoenixWord';
 
 class NewActivity extends Component {
 
@@ -77,7 +78,7 @@ class NewActivity extends Component {
               <Control>
                 <Input placeholder="Keyword..." value={this.state.keyword} name="keyword" onChange={this.handleInputChange} type="text" />
               </Control>
-              <Button color="white" className="button" onClick={this.createImgList}>
+              <Button color="white" className="searchButton" onClick={this.createImgList}>
                 Search
               </Button>
             </Field>
@@ -98,7 +99,11 @@ class NewActivity extends Component {
               />
             ))}
           </div>
-        </Container>
+
+          <div>
+            <Word location='newActivity'/>
+          </div>
+  
       </Section>
     );
   }

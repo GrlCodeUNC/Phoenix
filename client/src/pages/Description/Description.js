@@ -15,8 +15,7 @@ import DatePicker from "../../components/DatePicker";
 import Heading from "react-bulma-components/lib/components/heading";
 import moment from "moment";
 import './Description.css';
-// import Fonts from "../../../node_modules/google-fonts";
-// import Background from "../../memphis-colorful.png";
+import Word from '../../components/PhoenixWord';
 
 class Description extends Component {
 
@@ -67,6 +66,8 @@ class Description extends Component {
 
   render() {
     return (
+      <div>
+        <Word location='description'/> 
       <div className="allForms">
         <Container className="form">
           <Heading className="title1 has-text-centered">
@@ -102,6 +103,7 @@ class Description extends Component {
             </Button>
           </div>
         </Container>
+      </div>
       </div>
     );
   }
