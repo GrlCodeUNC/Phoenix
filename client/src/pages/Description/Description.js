@@ -68,7 +68,6 @@ class Description extends Component {
     return (
       <div>
         <Word location='description'/> 
-     
       <div className="allForms">
         <Container className="form">
           <Heading className="title1 has-text-centered">
@@ -99,7 +98,7 @@ class Description extends Component {
             </Field>
           </div>
           <div className="has-text-centered">
-            <Button color="light" className="submit" onClick={this.addActivity}>
+            <Button color="white" className="submit" onClick={this.addActivity}>
               Submit
             </Button>
           </div>
@@ -109,4 +108,6 @@ class Description extends Component {
     );
   }
 }
+
+
 export default Description;
