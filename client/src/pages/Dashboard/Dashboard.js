@@ -143,9 +143,10 @@ class Dashboard extends Component {
             <br/>
             <br/>
             <br/>
-              <UserPhoto/>
-              <UserName/>
-              <TopBar/> 
+            <UserPhoto/> 
+            <UserName>
+            </UserName>
+            <TopBar/> 
             </Column>
         
           <Column className="auto">

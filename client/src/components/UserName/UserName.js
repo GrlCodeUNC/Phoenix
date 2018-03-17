@@ -4,17 +4,18 @@ import 'bulma/css/bulma.css';
 
 
 
-// const UserName = props => {
-
-// return(<h1 src={localStorage.getItem("name")}/>) 
-// }
-let UserName = function statelessFunctionComponentClass(props) {
-    let source = './usernames/' + props.source;
-  
+const UserName = props => {
+    let name = localStorage.getItem("name")
     
+    let style = {
+        paddingTop: "45px",
+        textAlign: "right"
+      };
   
     return (
-      <h1 ={localStorage.getItem("name")} />
+      <div style={style}>
+        {name}
+      </div>
     );
   };
 
