@@ -17,6 +17,9 @@ class PhoenixWord extends Component {
           else if (this.props.location === 'description') {
             cssClass = 'Word-Description'
         }
+          else if (this.props.location === 'login') {
+            cssClass = 'Word-Login'
+        }
 
         return (
                <img src={word} className={cssClass} alt="word" style={{position:"fixed", opacity: ".3", bottom:"0px"}}/> 
