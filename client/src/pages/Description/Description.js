@@ -15,6 +15,8 @@ import DatePicker from "../../components/DatePicker";
 import Heading from "react-bulma-components/lib/components/heading";
 import moment from "moment";
 import './Description.css';
+// import Fonts from "../../../node_modules/google-fonts";
+// import Background from "../../memphis-colorful.png";
 
 class Description extends Component {
 
@@ -95,7 +97,7 @@ class Description extends Component {
             </Field>
           </div>
           <div className="has-text-centered">
-            <Button color="light" className="submit" onClick={this.addActivity}>
+            <Button color="white" className="submit" onClick={this.addActivity}>
               Submit
             </Button>
           </div>
@@ -104,4 +106,6 @@ class Description extends Component {
     );
   }
 }
+
+
 export default Description;

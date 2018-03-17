@@ -65,41 +65,40 @@ class NewActivity extends Component {
   render() {
 
     return (
-      <Section>
+    <Section>
         <Container default className="NewActivity">
-       
+      
           <Heading className="title has-text-centered">
-              New Activity
+            New Activity
           </Heading>
-     
+
           <div className="keyword has-text-centered round">
             <Field>
               <Control>
-                <Input placeholder="Keyword..." 
-                   value={this.state.keyword}
-                   name="keyword"
-                   onChange={this.handleInputChange}
-                   type="text"
-                />
+                <Input placeholder="Keyword..." value={this.state.keyword} name="keyword" onChange={this.handleInputChange} type="text" />
               </Control>
               <Button color="white" className="button" onClick={this.createImgList}>
                 Search
               </Button>
             </Field>
           </div>
-        </Container>
+
+
           <div className="pictures has-text-centered">
             {this.state.imgData.map(image => (
-                <Image className="imageCard image is-200x200"
-                  id={image.id}
-                  key={image.id} 
-                  alt={image.title} 
-                  src={image.display_sizes[0].uri}
-                  onClick={() => this.goToActivityDetails(image.display_sizes[0].uri)} // this way it passes the function to be called w/ the event triggers
-                />
+              <Image
+                className="imageCard image is-200x200 has-text-centered"
+                id={image.id}
+                key={image.id}
+                alt={image.title}
+                src={image.display_sizes[0].uri}
+                onClick={() =>
+                  this.goToActivityDetails(image.display_sizes[0].uri)
+                } // this way it passes the function to be called w/ the event triggers
+              />
             ))}
           </div>
-        {/* </Container> */}
+        </Container>
       </Section>
     );
   }
