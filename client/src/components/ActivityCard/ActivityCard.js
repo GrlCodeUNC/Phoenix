@@ -40,7 +40,7 @@ const ActivityCard = props => (
         <div className="timeInfo">
           <time>Get it Done: {moment(props.completeDate).format('MMMM Do YYYY')}</time>
         </div>
-        <br /> 
+        {/* <br />  */}
         {/* <div className="overlay">
           <div className="text">{props.plans}</div>
         </div> */}

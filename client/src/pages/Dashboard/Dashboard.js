@@ -78,20 +78,27 @@ class Dashboard extends Component {
       .catch(err => console.log(err));
   }
 
+  
+  showDetailsHover = () => {
+
+    console.log("does this work?")
+
+  }
+
   checkDates = (activity) => {
 
-    console.log("checkDate running");
+    // console.log("checkDate running");
 
     const dateFormatted = moment(activity.completeDate);
     const currentDate = moment();
     const timeframeDate = moment().add(14, "days");
     
-    console.log(dateFormatted);
-    console.log(currentDate);
-    console.log(timeframeDate);
+    // console.log(dateFormatted);
+    // console.log(currentDate);
+    // console.log(timeframeDate);
 
     if (dateFormatted <= currentDate) {
-      console.log("date overdue");
+      // console.log("date overdue");
 
       // className doesn't work
       // return (<ActivityCard className="overdue" removeActivity={this.removeActivity} key={activity._id} {...activity}/>)
@@ -100,16 +107,17 @@ class Dashboard extends Component {
     } else {
       // console.log("does this even work??");
       if (dateFormatted > currentDate && dateFormatted <= timeframeDate ) {
-        console.log("between the current date and the timeframe to complete");
+        // console.log("between the current date and the timeframe to complete");
         return (<ActivityCard getItDone={true} removeActivity={this.removeActivity} key={activity._id} {...activity}/>)
       } else {
-        console.log("this should be greater than the timeframeDate");
-        return (<ActivityCard stillTime={true} removeActivity={this.removeActivity} key={activity._id} {...activity}/>)
+        // console.log("this should be greater than the timeframeDate");
+        return (<ActivityCard stillTime={true} onMouseOver={this.showDetailsHover} removeActivity={this.removeActivity} key={activity._id} {...activity}/>)
       }
     }
 
 
   }
+
 
   removeActivity = (id) => {
 
