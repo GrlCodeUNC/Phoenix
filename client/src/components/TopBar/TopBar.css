@@ -2,6 +2,7 @@
 
  .search {
     width: 100%;
+   
 } 
 
 .button {
@@ -9,11 +10,12 @@
     background-color: #ffc8aa;
     color: white;
     border: none;
+    position:fixed;
 }
 
 .searchBar {
-   float: left;
-    
+   float: right; 
+   position: fixed;
 }
 
 .section{
@@ -23,3 +25,4 @@
 .field {
     font-family: 'Varela Round', sans-serif;
 }
+
