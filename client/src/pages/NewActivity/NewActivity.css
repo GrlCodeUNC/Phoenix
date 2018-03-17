@@ -1,5 +1,5 @@
 body {
-    
+    font-family: 'Varela Round', sans-serif;
 }
 
 .NewActivity {
@@ -13,6 +13,7 @@ body {
     padding: 20px;
     font-size: 50px;
     color: grey;
+    font-family: 'Varela Round', sans-serif;
 }
 
 .keyword {
@@ -23,6 +24,11 @@ body {
 
 .button {
     margin-top: 30px;
+    color: #bf431d;
+}
+
+.button.is-white {
+    color: #bf431d;
 }
 
 .pictures {
