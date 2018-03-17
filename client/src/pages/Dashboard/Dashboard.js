@@ -152,7 +152,7 @@ class Dashboard extends Component {
               {this.state.timeLineDates.length ? 
                   <TimeLine dates={this.state.timeLineDates} activities={this.state.activities}/>
                 :
-                  <h3>Add new activities to start your Phoenix Life</h3>
+                  <h3 style={{textAlign:"center"}}>Add new activities to start your Phoenix collection</h3>
               }
               <br/>
               <br/>
