@@ -12,7 +12,9 @@ import Textarea from "react-bulma-components/lib/components/form/components/text
 import Button from "react-bulma-components/lib/components/button";
 import API from '../../utils/API';
 import DatePicker from "../../components/DatePicker";
+import Heading from "react-bulma-components/lib/components/heading";
 import moment from "moment";
+import './Description.css';
 
 class Description extends Component {
 
@@ -63,14 +65,16 @@ class Description extends Component {
 
   render() {
     return (
-      <div>
-        {/* <Form/> */}
-        <Container default className="Form">
+      <div className="allForms">
+        <Container className="form">
+          <Heading className="title1 has-text-centered">
+            Description
+          </Heading>
           <div className="descriptionTitle">
             <Field>
               <Label>Title</Label>
               <Control>
-                <Input placeholder="" value={this.state.title} name="title" onChange={this.handleInputChange} />
+                <Input className="title" placeholder="" value={this.state.title} name="title" onChange={this.handleInputChange} />
               </Control>
             </Field>
           </div>
@@ -78,7 +82,7 @@ class Description extends Component {
             <Field>
               <Label>Timeline</Label>
               <Control>
-                <DatePicker selected={this.state.timeline} name="timeline" onChange={this.handleInputChange} />
+                <DatePicker className="timeline" selected={this.state.timeline} name="timeline" onChange={this.handleInputChange} />
               </Control>
             </Field>
           </div>
@@ -86,18 +90,16 @@ class Description extends Component {
             <Field>
               <Label>Description</Label>
               <Control>
-                <Textarea placeholder="" value={this.state.description} name="description" onChange={this.handleInputChange} />
+                <Textarea className="box" placeholder="" value={this.state.description} name="description" onChange={this.handleInputChange} />
               </Control>
             </Field>
           </div>
-        </Container>
-        <div>
           <div className="has-text-centered">
             <Button color="light" className="submit" onClick={this.addActivity}>
               Submit
             </Button>
           </div>
-        </div>
+        </Container>
       </div>
     );
   }

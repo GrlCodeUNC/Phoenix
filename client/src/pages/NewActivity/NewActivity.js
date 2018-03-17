@@ -70,7 +70,7 @@ class NewActivity extends Component {
        
           <Heading className="title has-text-centered">
               New Activity
-            </Heading>
+          </Heading>
      
           <div className="keyword has-text-centered round">
             <Field>
@@ -82,7 +82,7 @@ class NewActivity extends Component {
                    type="text"
                 />
               </Control>
-              <Button className="button" onClick={this.createImgList}>
+              <Button color="white" className="button" onClick={this.createImgList}>
                 Search
               </Button>
             </Field>
