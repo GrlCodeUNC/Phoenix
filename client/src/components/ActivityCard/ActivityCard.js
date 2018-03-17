@@ -17,9 +17,21 @@ import Masonry from 'react-masonry-component';
 const ActivityCard = props => (
   <Card className="loadActivities">
     <Card.Header>
-        <Card.Header.Title>
-            {props.title}<span onClick={() => props.removeActivity(props._id)} className="delete deleteRightAlign"></span>
-        </Card.Header.Title>
+        {props.overdue &&
+            <Card.Header.Title className="overdue">
+                {props.title}<span onClick={() => props.removeActivity(props._id)} className="delete deleteRightAlign"></span>
+            </Card.Header.Title>
+        }
+        {props.getItDone &&
+            <Card.Header.Title className="getItDone">
+                {props.title}<span onClick={() => props.removeActivity(props._id)} className="delete deleteRightAlign"></span>
+            </Card.Header.Title>
+        }
+        {props.stillTime &&
+            <Card.Header.Title>
+                {props.title}<span onClick={() => props.removeActivity(props._id)} className="delete deleteRightAlign"></span>
+            </Card.Header.Title>
+        }
     </Card.Header>
   
     <Card.Image size="3by2" src={props.photo} />
