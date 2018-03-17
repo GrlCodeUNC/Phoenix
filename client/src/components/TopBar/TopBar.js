@@ -17,19 +17,19 @@ const TopBar = props =>
 
 <div>
     <Section>
-            <Navbar>
+            <div className="searchBar">
               <Link to={"/NewActivity"}>
                 <Button>
                     +
                 </Button>
               </Link>
 
-                <Field>
+                {/* <Field>
                     <Control>
                         <Input placeholder="Search" className="search"/>
                     </Control>
-                </Field>
-            </Navbar>
+                </Field> */}
+            </div>
     </Section>
 </div>
 

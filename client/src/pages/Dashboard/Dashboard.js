@@ -134,17 +134,29 @@ class Dashboard extends Component {
       <div className="container">
         
         <Columns breakpoint="mobile">
-          <Column className="is-one-quarter sideBar" >
-            <UserPhoto/>
-            <UserName />
-            <TopBar/> 
-          </Column>
+          
+            <Column className="is-one-quarter" style={{backgroundColor: "#efefef"}}>
+            {/* adding breaks because nothing else is working!! */}
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+              <UserPhoto/>
+              <UserName/>
+              <TopBar/> 
+            </Column>
+        
           <Column className="auto">
-            {this.state.timeLineDates.length ? 
-              <TimeLine dates={this.state.timeLineDates} activities={this.state.activities}/>
-            :
-              <h3>Add new activities to start your Phoenix Life</h3>
-            }
+              <br/>
+              {this.state.timeLineDates.length ? 
+                  <TimeLine dates={this.state.timeLineDates} activities={this.state.activities}/>
+                :
+                  <h3>Add new activities to start your Phoenix Life</h3>
+              }
+              <br/>
+              <br/>
+
             {this.state.activities.length ?
               this.state.activities.map((activity) => {
               // console.log(activity)
