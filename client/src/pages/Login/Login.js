@@ -6,6 +6,8 @@ import './Login.css';
 import GoogleLogin from 'react-google-login';
 import Logo from "../../components/PhoenixLogo";
 import Word from "../../components/PhoenixWord";
+import Columns from 'react-bulma-components/lib/components/columns';
+import Column from 'react-bulma-components/lib/components/columns/components/column';
 
 
 class Login extends Component {
@@ -54,34 +56,36 @@ class Login extends Component {
 
   
 
-  render() {
-    return (
+//  
+render() {
+  return (
+    <div>
       <div>
-        <Word location='login'/>  
-          <div className="has-text-centered">
-              <Logo location='login'/>
-              <GoogleLogin 
-                clientId="1071904739843-5tl56tqp05ap4td8gsahf9uj0nrkrvhu.apps.googleusercontent.com"
-                buttonText="Login with Google"
-                onSuccess={this.responseGoogle}
-                onFailure={this.responseGoogle}
-              />
+      <Columns>
+        <Column>
+          <Logo location='login'/>
+        </Column>
+        <Column>
+        <GoogleLogin 
+              clientId="1071904739843-5tl56tqp05ap4td8gsahf9uj0nrkrvhu.apps.googleusercontent.com"
+              buttonText="Login with Google"
+              onSuccess={this.responseGoogle}
+              onFailure={this.responseGoogle}
+              style={{fontFamily: "Varela Round, sansSerif", top:"50%"}}
+            />
 
+            <h5 className="visualize">Visualize your bucket list dreams and reach them with Phoenix!</h5>
+        </Column>
+      </Columns>
 
-              <h5 className="visualize">Visualize your bucket list dreams and reach them with Phoenix!</h5>
-              {/* {this.state.loginSuccess ? <Link to="/Dashboard" /> : <Link to="/Login" />} */}
-              {/* <GoogleButton /> */}
-              {/* <GoogleButton onClick={() => this.goToDashboard} /> */}
-              {/* <Link to="/Dashboard">
-                <GoogleButton />
-              </Link> */}
-
-          </div>
-        
       </div>
-    
-    );
-  }
+      <Word location='login'/>  
+    </div>
+  
+  );
+}
 }
 
 export default Login;
+
+
