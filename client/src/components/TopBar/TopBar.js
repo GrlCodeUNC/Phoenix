@@ -19,7 +19,7 @@ const TopBar = props =>
     <Section>
             <div className="searchBar">
               <Link to={"/NewActivity"}>
-                <Button>
+                <Button style={{marginTop: "60px"}}>
                     +
                 </Button>
               </Link>

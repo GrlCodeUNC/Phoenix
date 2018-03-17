@@ -9,6 +9,7 @@
     background-color: #ffc8aa;
     color: white;
     border: none;
+    position:fixed;
 }
 
 .searchBar {
@@ -22,4 +23,8 @@
 
 .field {
     font-family: 'Varela Round', sans-serif;
+}
+
+element.style {
+    margin-top: 60px;
 }
