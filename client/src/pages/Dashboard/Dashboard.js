@@ -132,7 +132,7 @@ class Dashboard extends Component {
     console.log(localStorage.getItem("name"));
     return (
      
-      <div className="container">
+      <div className="container" style={{minHeight:"100%"}}>
         
         <Columns breakpoint="mobile">
           
@@ -170,7 +170,7 @@ class Dashboard extends Component {
               // })
             :
               <Column>
-                <h3>No Activities to Display</h3>
+                <h1 style={{textAlign: "center"}}>No Activities to Display</h1>
               </Column>
             }
           </Column>

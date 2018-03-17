@@ -9,11 +9,11 @@
     background-color: #ffc8aa;
     color: white;
     border: none;
+    position:fixed;
 }
 
 .searchBar {
-   float: left;
-    
+   float: right; 
 }
 
 .section{
@@ -23,3 +23,4 @@
 .field {
     font-family: 'Varela Round', sans-serif;
 }
+
