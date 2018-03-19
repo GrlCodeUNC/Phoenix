@@ -11,6 +11,9 @@ import UserPhoto from '../../components/UserPhoto';
 import UserName from '../../components/UserName';
 import moment from "moment";
 import Section from 'react-bulma-components/lib/components/section';
+import Word from '../../components/PhoenixWord';
+// import './Dashboard.css';
+
 
 
 
@@ -43,35 +46,7 @@ class Dashboard extends Component {
         // console.log(newTimeArray);
         this.setState({ activities: res.data, timeLineDates: newTimeArray });
 
-        // var overdueDates
-        // this.state.activities.forEach(activity => {
-        //   const dateFormatted = moment(activity.completeDate);
-        //   const currentDate = moment();
-        //   const timeframeDate = moment().add(14, "days");
-          
-        //   console.log(dateFormatted);
-        //   console.log(currentDate);
-        //   console.log(timeframeDate);
-
-        //   if (dateFormatted <= currentDate) {
-        //     console.log("date overdue");
-
-
-        //   } else {
-        //     // console.log("does this even work??");
-        //     if (dateFormatted > currentDate && dateFormatted <= timeframeDate ) {
-        //       console.log("between the current date and the timeframe to complete");
-        //     } else {
-        //       console.log("this should be greater than the timeframeDate");
-        //     }
-        //   }
-
-          // if (dateFormatted > currentDate && dateFormatted <= timeframeDate ) {
-          //   console.log("between the current date and the timeframe to complete");
-          // } else {
-          //   console.log("this should be greater than the timeframeDate");
-          // }
-        // });
+       
       })
       .catch(err => console.log(err));
   }
@@ -136,13 +111,10 @@ class Dashboard extends Component {
             <Column className="is-one-quarter" style={{backgroundColor: "#efefef"}}>
             {/* adding breaks because nothing else is working!! */}
             <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
               <UserPhoto/>
               <UserName/>
               <TopBar/> 
+              <Word location='dashboard'/>
             </Column>
         
           <Column className="auto">
