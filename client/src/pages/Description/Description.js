@@ -83,7 +83,7 @@ class Description extends Component {
           </div>
           <div className="descriptionTimeline">
             <Field>
-              <Label>Timeline</Label>
+              <Label style={{marginTop:"30px"}}>Timeline</Label>
               <Control>
                 <DatePicker className="timeline" selected={this.state.timeline} name="timeline" onChange={this.handleInputChange} />
               </Control>
@@ -98,7 +98,7 @@ class Description extends Component {
             </Field>
           </div>
           <div className="has-text-centered">
-            <Button color="white" className="submit" onClick={this.addActivity}>
+            <Button  className="submit" onClick={this.addActivity}>
               Submit
             </Button>
           </div>
