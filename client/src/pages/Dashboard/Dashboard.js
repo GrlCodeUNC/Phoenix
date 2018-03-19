@@ -11,16 +11,18 @@ import UserPhoto from '../../components/UserPhoto';
 import UserName from '../../components/UserName';
 import moment from "moment";
 import Section from 'react-bulma-components/lib/components/section';
+import Word from '../../components/PhoenixWord';
+// import './Dashboard.css';
+
 
 
 class Dashboard extends Component {
   state = {
     user: "",
-    // upcomingActivityDate: moment(),
-    // overdueActivityDate: moment(),
-    // currentDate: moment(),
     activities: [],
-    timeLineDates: []
+    timeLineDates: [],
+    hoverState: false,
+    activeTimelineDate: 0
   }
 
   componentDidMount() {
@@ -38,81 +40,67 @@ class Dashboard extends Component {
       .then(res => {
         // console.log('res ', res);
         let newTimeArray = [];
+        let currentIndex = 0;
+        const currentDate = moment();
+            
         res.data.forEach((activity) => {
+          
+          const dateFormatted = moment(activity.completeDate);
+
+          console.log(`currentDate = ${currentDate}`);
+          console.log(`dateFormatted = ${dateFormatted}`);
+
+          console.log(dateFormatted.isAfter(currentDate, 'day'));
+
+          if (!dateFormatted.isAfter(currentDate, 'day')) {
+            currentIndex++;
+          }
+        
           newTimeArray.push(activity.completeDate);
         });
-        // console.log(newTimeArray);
-        this.setState({ activities: res.data, timeLineDates: newTimeArray });
 
-        // var overdueDates
-        // this.state.activities.forEach(activity => {
-        //   const dateFormatted = moment(activity.completeDate);
-        //   const currentDate = moment();
-        //   const timeframeDate = moment().add(14, "days");
-          
-        //   console.log(dateFormatted);
-        //   console.log(currentDate);
-        //   console.log(timeframeDate);
-
-        //   if (dateFormatted <= currentDate) {
-        //     console.log("date overdue");
-
-
-        //   } else {
-        //     // console.log("does this even work??");
-        //     if (dateFormatted > currentDate && dateFormatted <= timeframeDate ) {
-        //       console.log("between the current date and the timeframe to complete");
-        //     } else {
-        //       console.log("this should be greater than the timeframeDate");
-        //     }
-        //   }
-
-          // if (dateFormatted > currentDate && dateFormatted <= timeframeDate ) {
-          //   console.log("between the current date and the timeframe to complete");
-          // } else {
-          //   console.log("this should be greater than the timeframeDate");
-          // }
-        // });
+        console.log(`currentIndex = ${currentIndex}`);
+        
+        this.setState({ activities: res.data, timeLineDates: newTimeArray, activeTimelineDate: currentIndex -1});
+       
       })
       .catch(err => console.log(err));
   }
 
+  
+  showDetailsHover = (plans) => {
+
+    this.setState({ hoverState: true });
+
+  }
+
   checkDates = (activity) => {
 
-    console.log("checkDate running");
-
+    // console.log("checkDate running");
     const dateFormatted = moment(activity.completeDate);
     const currentDate = moment();
     const timeframeDate = moment().add(14, "days");
-    
-    console.log(dateFormatted);
-    console.log(currentDate);
-    console.log(timeframeDate);
 
     if (dateFormatted <= currentDate) {
-      console.log("date overdue");
-
-      // className doesn't work
-      // return (<ActivityCard className="overdue" removeActivity={this.removeActivity} key={activity._id} {...activity}/>)
-      return (<ActivityCard overdue={true} removeActivity={this.removeActivity} key={activity._id} {...activity}/>)
+      
+      return (<ActivityCard overdue={true} hoverClass={this.state.hoverState} onMouseOver={this.showDetailsHover} removeActivity={this.removeActivity} key={activity._id} id={activity._id} {...activity}/>)
 
     } else {
-      // console.log("does this even work??");
+
       if (dateFormatted > currentDate && dateFormatted <= timeframeDate ) {
-        console.log("between the current date and the timeframe to complete");
-        return (<ActivityCard getItDone={true} removeActivity={this.removeActivity} key={activity._id} {...activity}/>)
+
+        return (<ActivityCard getItDone={true} hoverClass={this.state.hoverState} onMouseOver={this.showDetailsHover} removeActivity={this.removeActivity} key={activity._id} {...activity}/>)
       } else {
-        console.log("this should be greater than the timeframeDate");
-        return (<ActivityCard stillTime={true} removeActivity={this.removeActivity} key={activity._id} {...activity}/>)
+
+        return (<ActivityCard stillTime={true} hoverClass={this.state.hoverState} onMouseOver={this.showDetailsHover} removeActivity={this.removeActivity} id={activity._id} key={activity._id} {...activity}/>)
       }
     }
 
 
   }
 
-  removeActivity = (id) => {
 
-    // console.log(`delete activity triggered ${id}`);
+  removeActivity = (id) => {
 
     API.deleteActivity(id)
       .then(res => {
@@ -138,20 +126,16 @@ class Dashboard extends Component {
             <Column className="is-one-quarter" style={{backgroundColor: "#efefef"}}>
             {/* adding breaks because nothing else is working!! */}
             <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <UserPhoto/> 
-            {/* <UserName>
-            </UserName> */}
-            <TopBar/> 
+              <UserPhoto/>
+              <UserName/>
+              <TopBar/> 
+              <Word location='dashboard'/>
             </Column>
         
           <Column className="auto">
               <br/>
               {this.state.timeLineDates.length ? 
-                  <TimeLine dates={this.state.timeLineDates} activities={this.state.activities}/>
+                  <TimeLine dates={this.state.timeLineDates} activities={this.state.activities} indexDefault={this.state.activeTimelineDate}/>
                 :
                   <h3 style={{textAlign:"center"}}>Add new activities to start your Phoenix collection</h3>
               }
@@ -161,12 +145,8 @@ class Dashboard extends Component {
             {this.state.activities.length ?
               this.state.activities.map((activity) => {
               // console.log(activity)
-              // return <ActivityCard removeActivity={this.removeActivity} key={activity._id} {...activity}/>
               return this.checkDates(activity)
               })
-              // this.state.activities.forEach((activity) => {
-              //   return this.checkDates(activity)
-              // })
             :
               <Column>
                 <h1 style={{textAlign: "center"}}>No Activities to Display</h1>
