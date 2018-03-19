@@ -11,7 +11,7 @@ import Control from 'react-bulma-components/lib/components/form/components/contr
 import Input from 'react-bulma-components/lib/components/form/components/input';
 import Navbar from 'react-bulma-components/lib/components/navbar';
 import { Link } from "react-router-dom";
-import Fonts from "../../../node_modules/google-fonts";
+// import Fonts from "../../../node_modules/google-fonts";
 
 const TopBar = props =>
 

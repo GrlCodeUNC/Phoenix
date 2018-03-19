@@ -16,7 +16,6 @@ import Word from '../../components/PhoenixWord';
 
 
 
-
 class Dashboard extends Component {
   state = {
     user: "",
@@ -117,6 +116,7 @@ class Dashboard extends Component {
 
   render() {
     console.log('this state ', this.state)
+    console.log(localStorage.getItem("name"));
     return (
      
       <div className="container" style={{minHeight:"100%"}}>
