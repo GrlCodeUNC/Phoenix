@@ -105,8 +105,11 @@ class NewActivity extends Component {
             ))}
           </div>
 
-          
-        </Container>      
+          <div>
+            <Word location='newActivity'/>
+          </div>
+      </Container>       
+
       </Section>
     );
   }
