@@ -65,7 +65,7 @@ render() {
         <Column>
           <Logo location='login'/>
         </Column>
-        <Column style={{marginTop: "29%"}}>
+        <Column style={{display: "block", margin: "auto"}}>
         <GoogleLogin 
               clientId="1071904739843-5tl56tqp05ap4td8gsahf9uj0nrkrvhu.apps.googleusercontent.com"
               buttonText="Login with Google"
