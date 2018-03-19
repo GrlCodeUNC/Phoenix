@@ -14,8 +14,9 @@
     margin-right: auto;
     width: 60%;
     padding: 50px;
-    background-color: #ffc8aa;
-    border-radius: 25px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color:  #bf431d;;
     margin-top: 70px;
 }
 
