@@ -73,17 +73,17 @@ class Description extends Component {
           <Heading className="title1 has-text-centered">
             Description
           </Heading>
-          <div className="descriptionTitle">
+          <div className="">
             <Field>
               <Label>Title</Label>
               <Control>
-                <Input className="title" placeholder="" value={this.state.title} name="title" onChange={this.handleInputChange} />
+                <Input className="descriptionTitle" placeholder="" value={this.state.title} name="title" onChange={this.handleInputChange} />
               </Control>
             </Field>
           </div>
           <div className="descriptionTimeline">
             <Field>
-              <Label>Timeline</Label>
+              <Label style={{marginTop:"30px"}}>Timeline</Label>
               <Control>
                 <DatePicker className="timeline" selected={this.state.timeline} name="timeline" onChange={this.handleInputChange} />
               </Control>
@@ -98,7 +98,7 @@ class Description extends Component {
             </Field>
           </div>
           <div className="has-text-centered">
-            <Button color="white" className="submit" onClick={this.addActivity}>
+            <Button  className="submit" onClick={this.addActivity}>
               Submit
             </Button>
           </div>
