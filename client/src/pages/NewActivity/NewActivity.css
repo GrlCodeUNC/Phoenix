@@ -1,18 +1,22 @@
-body {
+/* body {
     font-family: 'Varela Round', sans-serif;
-}
+} */
 
 .NewActivity {
-    background-color: #ffc8aa;
-    border-radius: 25px;
-    /* width: 700px;
-    height: 700px; */
+       border-color: #bf431d;
+       border-style: solid;
+       border-radius: 5px;
+       width: 60%;
 }
+
+/* .box {
+     border-radius: 25px;
+} */
 
 .title {
     padding: 20px;
     font-size: 50px;
-    color: grey;
+    color: #bf431d;
     font-family: 'Varela Round', sans-serif;
 }
 
@@ -22,22 +26,30 @@ body {
     margin-left: 200px;
 }
 
-.button {
-    margin-top: 30px;
-    color: #bf431d;
+.searchButton {
+    margin-top: 30px; 
+    background-color: #f99a1c;
+    opacity: .9;
+    color: white;
+    border-color: transparent;
+    
 }
 
-.button.is-white {
+.searchButton.is-white {
     color: #bf431d;
 }
 
 .pictures {
     background-color: white;
     padding: 10px;
-    margin: 30px;
-    /* height: 300px; */
-    
+    margin-top: 30px;
+    /* height: 300px; */   
 }
+/* 
+.size {
+    margin-right: 100px;
+    margin-left: 100px;
+} */
 
 .imageCard {
     /* height: auto;
@@ -51,24 +63,21 @@ body {
     justify-content: space-around;
     align-content: flex-start;
     overflow: auto; */
-
-    background: #fff;
+    /* background: #fff; */
     /* display: inline-flex;
     flex-flow: row wrap;
     align-content: flex-start;
     overflow: auto;  */
     overflow: hidden;
     display: inline-block;
-
     border-radius: 2px;
     /* height: 325px; */
-    height: 250px;
+    height: 200px;
     margin: 1rem;
     /* padding: 5px; */
     /* position: relative; */
     /* width: 325px; */
-    width: 250px;
+    width: 200px;
     box-shadow: 0 3px 6px #bf431d, 0 3px 6px #999;
     text-align: left;
-    
 }

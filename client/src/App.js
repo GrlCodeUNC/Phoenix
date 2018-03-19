@@ -6,6 +6,8 @@ import Dashboard from './pages/Dashboard';
 import Login from "./pages/Login";
 import NewActivity from "./pages/NewActivity";
 import Description from "./pages/Description";
+// import Fonts from "../../client/node_modules/google-fonts";
+
 
 // class App extends Component {
 //   state = {

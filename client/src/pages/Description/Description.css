@@ -1,17 +1,21 @@
+.allForms {
+    
+}
 .submit {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px;
+    margin-top: 30px;
     color: #bf431d;
 }
 
 .form {
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 60%;
     padding: 50px;
-    background-color: #ffc8aa;
-    border-radius: 25px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color:  #bf431d;;
     margin-top: 70px;
 }
 
@@ -20,9 +24,17 @@
     color: grey;
 }
 
+.descriptionTimeline {
+    margin-bottom: 30px;
+}
+
+.titleHeading {
+    color: grey;
+}
+
 .title {
     margin-bottom: 30px;
-    color: grey;
+    height: 10px;
 }
 
 .timeline {
@@ -31,8 +43,4 @@
 
 .box {
 
-}
-
-.title1 {
-    font-family: 'Varela Round', sans-serif;
 }
