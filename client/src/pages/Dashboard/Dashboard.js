@@ -18,7 +18,8 @@ class Dashboard extends Component {
   state = {
     user: "",
     activities: [],
-    timeLineDates: []
+    timeLineDates: [],
+    hoverState: false
   }
 
   componentDidMount() {
@@ -76,9 +77,9 @@ class Dashboard extends Component {
   }
 
   
-  showDetailsHover = () => {
+  showDetailsHover = (plans) => {
 
-    console.log("does this work?")
+    this.setState({ hoverState: true });
 
   }
 
@@ -89,26 +90,20 @@ class Dashboard extends Component {
     const dateFormatted = moment(activity.completeDate);
     const currentDate = moment();
     const timeframeDate = moment().add(14, "days");
-    
-    // console.log(dateFormatted);
-    // console.log(currentDate);
-    // console.log(timeframeDate);
+     
 
     if (dateFormatted <= currentDate) {
-      // console.log("date overdue");
-
-      // className doesn't work
-      // return (<ActivityCard className="overdue" removeActivity={this.removeActivity} key={activity._id} {...activity}/>)
-      return (<ActivityCard overdue={true} removeActivity={this.removeActivity} key={activity._id} {...activity}/>)
+      
+      return (<ActivityCard overdue={true} hoverClass={this.state.hoverState} onMouseOver={this.showDetailsHover} removeActivity={this.removeActivity} key={activity._id} id={activity._id} {...activity}/>)
 
     } else {
-      // console.log("does this even work??");
+
       if (dateFormatted > currentDate && dateFormatted <= timeframeDate ) {
-        // console.log("between the current date and the timeframe to complete");
-        return (<ActivityCard getItDone={true} removeActivity={this.removeActivity} key={activity._id} {...activity}/>)
+
+        return (<ActivityCard getItDone={true} hoverClass={this.state.hoverState} onMouseOver={this.showDetailsHover} removeActivity={this.removeActivity} key={activity._id} {...activity}/>)
       } else {
-        // console.log("this should be greater than the timeframeDate");
-        return (<ActivityCard stillTime={true} onMouseOver={this.showDetailsHover} removeActivity={this.removeActivity} key={activity._id} {...activity}/>)
+
+        return (<ActivityCard stillTime={true} hoverClass={this.state.hoverState} onMouseOver={this.showDetailsHover} removeActivity={this.removeActivity} id={activity._id} key={activity._id} {...activity}/>)
       }
     }
 
@@ -117,8 +112,6 @@ class Dashboard extends Component {
 
 
   removeActivity = (id) => {
-
-    // console.log(`delete activity triggered ${id}`);
 
     API.deleteActivity(id)
       .then(res => {
@@ -165,12 +158,8 @@ class Dashboard extends Component {
             {this.state.activities.length ?
               this.state.activities.map((activity) => {
               // console.log(activity)
-              // return <ActivityCard removeActivity={this.removeActivity} key={activity._id} {...activity}/>
               return this.checkDates(activity)
               })
-              // this.state.activities.forEach((activity) => {
-              //   return this.checkDates(activity)
-              // })
             :
               <Column>
                 <h1 style={{textAlign: "center"}}>No Activities to Display</h1>

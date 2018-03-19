@@ -67,7 +67,7 @@
     color: white;
 }
 
-.overlay {
+ .overlay {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -80,7 +80,8 @@
     background-color: #008CBA;
   }
   
-  .container:hover .overlay {
+  /* .container:hover .overlay { */
+  .card:hover .overlay {
     opacity: 1;
   }
   
@@ -93,5 +94,5 @@
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     text-align: center;
-  }
+  } 
 
