@@ -76,7 +76,7 @@ class NewActivity extends Component {
               <Control>
                 <Input placeholder="Keyword..." value={this.state.keyword} name="keyword" onChange={this.handleInputChange} type="text" />
               </Control>
-              <Button color="white" className="searchButton" onClick={this.createImgList}>
+              <Button  className="searchButton" onClick={this.createImgList}>
                 Search
               </Button>
             </Field>
