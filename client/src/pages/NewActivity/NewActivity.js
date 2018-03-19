@@ -65,10 +65,8 @@ class NewActivity extends Component {
 
   render() {
 
-    return (
-    <Section>
+    return <Section>
         <Container default className="NewActivity">
-      
           <Heading className="title has-text-centered">
             New Activity
           </Heading>
@@ -82,13 +80,7 @@ class NewActivity extends Component {
                 Search
               </Button>
             </Field>
-           
           </div>
-
-          <div>
-            <Word location='newActivity'/>
-          </div>
-
 
           <div className="pictures has-text-centered">
             {this.state.imgData.map(image => (
@@ -104,14 +96,11 @@ class NewActivity extends Component {
               />
             ))}
           </div>
-
-          <div>
-            <Word location='newActivity'/>
-          </div>
-      </Container>       
-
-      </Section>
-    );
+        </Container>
+        <div>
+          <Word location="newActivity" />
+        </div>
+      </Section>;
   }
 }
 
