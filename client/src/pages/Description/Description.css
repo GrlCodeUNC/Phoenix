@@ -28,12 +28,13 @@
     margin-bottom: 30px;
 }
 
-.title1 {
+.titleHeading {
     color: grey;
 }
 
 .title {
     margin-bottom: 30px;
+    height: 10px;
 }
 
 .timeline {
@@ -43,7 +44,3 @@
 .box {
 
 }
-
-/* .title1 {
-    font-family: 'Varela Round', sans-serif;
-} */
