@@ -1,6 +1,6 @@
-body {
+/* body {
     font-family: 'Varela Round', sans-serif;
-}
+} */
 
 .NewActivity {
        border-color: #bf431d;
@@ -8,6 +8,10 @@ body {
        border-width: 10px;
        border-radius: 5px;
 }
+
+/* .box {
+     border-radius: 25px;
+} */
 
 .title {
     padding: 20px;
@@ -38,9 +42,13 @@ body {
 .pictures {
     background-color: white;
     padding: 10px;
-    margin: 30px;
-    /* height: 300px; */
-    
+    margin-top: 30px;
+    /* height: 300px; */   
+}
+
+.size {
+    margin-right: 100px;
+    margin-left: 100px;
 }
 
 .imageCard {
@@ -66,12 +74,12 @@ body {
 
     border-radius: 2px;
     /* height: 325px; */
-    height: 250px;
+    height: 200px;
     margin: 1rem;
     /* padding: 5px; */
     /* position: relative; */
     /* width: 325px; */
-    width: 250px;
+    width: 200px;
     box-shadow: 0 3px 6px #bf431d, 0 3px 6px #999;
     text-align: left;
     
