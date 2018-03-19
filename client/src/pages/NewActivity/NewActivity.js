@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import "bulma/css/bulma.css";
+// import "bulma/css/bulma.css";
 import Container from "react-bulma-components/lib/components/container";
 import Section from "react-bulma-components/lib/components/section";
 import Heading from "react-bulma-components/lib/components/heading";

@@ -13,7 +13,6 @@ import moment from "moment";
 import Section from 'react-bulma-components/lib/components/section';
 
 
-
 class Dashboard extends Component {
   state = {
     user: "",

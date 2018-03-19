@@ -44,13 +44,14 @@
 .content {
     padding: 10px;
 }
-.card {
+
+ /* .card {
     font-family: 'Varela Round', sans-serif;
 }
 
 .timeInfo {
     font-family: 'Varela Round', sans-serif;
-}
+}  */
 
 .overdue {
 
