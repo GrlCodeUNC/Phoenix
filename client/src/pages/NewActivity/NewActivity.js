@@ -67,9 +67,8 @@ class NewActivity extends Component {
 
     return (
       <div>
-       
-       <Section>
        <Word location="newActivity" />
+       <Section>
         <Container default className="NewActivity" style={{background: "transparent"}}>
           <Heading className="title has-text-centered">
             New Activity
