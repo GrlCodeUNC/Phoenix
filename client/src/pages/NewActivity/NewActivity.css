@@ -3,9 +3,9 @@
 } */
 
 .NewActivity {
-    background-color: #ffc8aa;
-    width: 60%;
-    border-radius: 25px;
+       border-color: #bf431d;
+       border-style: solid;
+       border-radius: 5px;
 }
 
 /* .box {
@@ -15,8 +15,8 @@
 .title {
     padding: 20px;
     font-size: 50px;
-    color: grey;
-    /* font-family: 'Varela Round', sans-serif; */
+    color: #bf431d;
+    font-family: 'Varela Round', sans-serif;
 }
 
 .keyword {
@@ -26,8 +26,12 @@
 }
 
 .searchButton {
-    margin-top: 30px;
-    color: #bf431d;
+    margin-top: 30px; 
+    background-color: #f99a1c;
+    opacity: .9;
+    color: white;
+    border-color: transparent;
+    
 }
 
 .searchButton.is-white {
@@ -59,7 +63,7 @@
     align-content: flex-start;
     overflow: auto; */
 
-    background: #fff;
+    /* background: #fff; */
     /* display: inline-flex;
     flex-flow: row wrap;
     align-content: flex-start;
@@ -69,7 +73,11 @@
 
     border-radius: 2px;
     /* height: 325px; */
+<<<<<<< HEAD
     height: 200px;
+=======
+    /* height: 200px; */
+>>>>>>> master
     margin: 1rem;
     /* padding: 5px; */
     /* position: relative; */

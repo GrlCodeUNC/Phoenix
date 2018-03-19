@@ -82,6 +82,11 @@ class NewActivity extends Component {
                 Search
               </Button>
             </Field>
+           
+          </div>
+
+          <div>
+            <Word location='newActivity'/>
           </div>
 
 
@@ -104,6 +109,7 @@ class NewActivity extends Component {
             <Word location='newActivity'/>
           </div>
       </Container>       
+
       </Section>
     );
   }

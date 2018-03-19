@@ -65,13 +65,13 @@ render() {
         <Column>
           <Logo location='login'/>
         </Column>
-        <Column>
+        <Column style={{display: "block", margin: "auto"}}>
         <GoogleLogin 
               clientId="1071904739843-5tl56tqp05ap4td8gsahf9uj0nrkrvhu.apps.googleusercontent.com"
               buttonText="Login with Google"
               onSuccess={this.responseGoogle}
               onFailure={this.responseGoogle}
-              style={{fontFamily: "Varela Round, sansSerif", top:"50%"}}
+              style={{fontFamily: "Varela Round, sansSerif", fontSize: "15px", backgroundColor: "#f99a1c", opacity: ".7", padding: "10px", color: "white", border: "none"}}
             />
 
             <h5 className="visualize">Visualize your bucket list dreams and reach them with Phoenix!</h5>
