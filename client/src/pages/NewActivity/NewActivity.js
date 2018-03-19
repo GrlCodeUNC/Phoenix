@@ -65,8 +65,11 @@ class NewActivity extends Component {
 
   render() {
 
-    return <Section>
-        <Container default className="NewActivity">
+    return (
+      <div>
+       <Word location="newActivity" />
+       <Section>
+        <Container default className="NewActivity" style={{background: "transparent"}}>
           <Heading className="title has-text-centered">
             New Activity
           </Heading>
@@ -97,10 +100,11 @@ class NewActivity extends Component {
             ))}
           </div>
         </Container>
-        <div>
-          <Word location="newActivity" />
-        </div>
-      </Section>;
+        </Section>
+        
+     
+      </div>
+    )
   }
 }
 

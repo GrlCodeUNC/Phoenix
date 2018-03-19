@@ -118,18 +118,19 @@ class Dashboard extends Component {
   render() {
     console.log('this state ', this.state)
     return (
-     
+      <div>
+      <Word location='dashboard'/>
       <div className="container" style={{minHeight:"100%"}}>
+      
         
         <Columns breakpoint="mobile">
           
-            <Column className="is-one-quarter" style={{backgroundColor: "#efefef"}}>
+            <Column className="is-one-quarter" style={{backgroundColor: "#aeaeae8c"}}>
             {/* adding breaks because nothing else is working!! */}
             <br/>
               <UserPhoto/>
               <UserName/>
               <TopBar/> 
-              <Word location='dashboard'/>
             </Column>
         
           <Column className="auto">
@@ -155,6 +156,7 @@ class Dashboard extends Component {
           </Column>
         </Columns>  
         
+      </div>
       </div>
 
     );
