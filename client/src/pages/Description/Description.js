@@ -73,11 +73,11 @@ class Description extends Component {
           <Heading className="title1 has-text-centered">
             Description
           </Heading>
-          <div className="descriptionTitle">
+          <div className="">
             <Field>
               <Label>Title</Label>
               <Control>
-                <Input className="title" placeholder="" value={this.state.title} name="title" onChange={this.handleInputChange} />
+                <Input className="descriptionTitle" placeholder="" value={this.state.title} name="title" onChange={this.handleInputChange} />
               </Control>
             </Field>
           </div>

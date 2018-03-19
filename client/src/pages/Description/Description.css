@@ -15,22 +15,23 @@
     padding: 50px;
     border-style: solid;
     border-radius: 5px;
-    border-color:  #bf431d;;
+    border-color:  #bf431d;
     margin-top: 70px;
 }
 
 .descriptionTitle {
-    margin-top: 50px;
-    color: grey;
+    /* margin-top: 50px; */
+    
+    
 }
 
 .descriptionTimeline {
     margin-bottom: 30px;
 }
 
-.titleHeading {
+/* .titleHeading {
     color: grey;
-}
+} */
 
 .title {
     margin-bottom: 30px;
