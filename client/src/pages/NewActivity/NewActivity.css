@@ -6,6 +6,7 @@
        border-color: #bf431d;
        border-style: solid;
        border-radius: 5px;
+       width: 60%;
 }
 
 /* .box {
@@ -44,11 +45,11 @@
     margin-top: 30px;
     /* height: 300px; */   
 }
-
+/* 
 .size {
     margin-right: 100px;
     margin-left: 100px;
-}
+} */
 
 .imageCard {
     /* height: auto;
@@ -62,7 +63,6 @@
     justify-content: space-around;
     align-content: flex-start;
     overflow: auto; */
-
     /* background: #fff; */
     /* display: inline-flex;
     flex-flow: row wrap;
@@ -70,10 +70,9 @@
     overflow: auto;  */
     overflow: hidden;
     display: inline-block;
-
     border-radius: 2px;
     /* height: 325px; */
-    /* height: 200px; */
+    height: 200px;
     margin: 1rem;
     /* padding: 5px; */
     /* position: relative; */
@@ -81,5 +80,4 @@
     width: 200px;
     box-shadow: 0 3px 6px #bf431d, 0 3px 6px #999;
     text-align: left;
-    
 }

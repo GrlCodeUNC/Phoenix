@@ -8,7 +8,7 @@ const TimeLine = props =>
     {/* Bounding box for the Timeline */}
         <div style={{ width: '90%', height: '80px', margin: '0 auto' }}>
             <HorizontalTimeline
-                index={ 0 }
+                index={ props.indexDefault }
                 indexClick={(index) => {
                     console.log(props.dates);
                 }}
