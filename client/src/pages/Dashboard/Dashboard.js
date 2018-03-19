@@ -22,7 +22,8 @@ class Dashboard extends Component {
     user: "",
     activities: [],
     timeLineDates: [],
-    hoverState: false
+    hoverState: false,
+    activeTimelineDate: 0
   }
 
   componentDidMount() {
@@ -40,12 +41,28 @@ class Dashboard extends Component {
       .then(res => {
         // console.log('res ', res);
         let newTimeArray = [];
+        let currentIndex = 0;
+        const currentDate = moment();
+            
         res.data.forEach((activity) => {
+          
+          const dateFormatted = moment(activity.completeDate);
+
+          console.log(`currentDate = ${currentDate}`);
+          console.log(`dateFormatted = ${dateFormatted}`);
+
+          console.log(dateFormatted.isAfter(currentDate, 'day'));
+
+          if (!dateFormatted.isAfter(currentDate, 'day')) {
+            currentIndex++;
+          }
+        
           newTimeArray.push(activity.completeDate);
         });
-        // console.log(newTimeArray);
-        this.setState({ activities: res.data, timeLineDates: newTimeArray });
 
+        console.log(`currentIndex = ${currentIndex}`);
+        
+        this.setState({ activities: res.data, timeLineDates: newTimeArray, activeTimelineDate: currentIndex -1});
        
       })
       .catch(err => console.log(err));
@@ -61,11 +78,9 @@ class Dashboard extends Component {
   checkDates = (activity) => {
 
     // console.log("checkDate running");
-
     const dateFormatted = moment(activity.completeDate);
     const currentDate = moment();
     const timeframeDate = moment().add(14, "days");
-     
 
     if (dateFormatted <= currentDate) {
       
@@ -120,7 +135,7 @@ class Dashboard extends Component {
           <Column className="auto">
               <br/>
               {this.state.timeLineDates.length ? 
-                  <TimeLine dates={this.state.timeLineDates} activities={this.state.activities}/>
+                  <TimeLine dates={this.state.timeLineDates} activities={this.state.activities} indexDefault={this.state.activeTimelineDate}/>
                 :
                   <h3 style={{textAlign:"center"}}>Add new activities to start your Phoenix collection</h3>
               }
