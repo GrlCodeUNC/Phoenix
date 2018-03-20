@@ -45,10 +45,14 @@ class Dashboard extends Component {
           newTimeArray.push(activity.completeDate);
         });
 
+        if (currentIndex > 0) {
+          currentIndex--;
+        }
+
         this.setState({
           activities: res.data,
           timeLineDates: newTimeArray,
-          activeTimelineDate: currentIndex - 1
+          activeTimelineDate: currentIndex
         });
       })
       .catch(err => console.log(err));
