@@ -141,7 +141,7 @@ class Dashboard extends Component {
               }
               <br/>
               <br/>
-
+            <div style={{marginLeft: "7%"}}>
             {this.state.activities.length ?
               this.state.activities.map((activity) => {
               // console.log(activity)
@@ -152,8 +152,10 @@ class Dashboard extends Component {
                 <h1 style={{textAlign: "center"}}>No Activities to Display</h1>
               </Column>
             }
+            </div>
           </Column>
         </Columns>  
+        
         
         </div>
       </div>
