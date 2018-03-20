@@ -1,9 +1,9 @@
-
 const router = require("express").Router();
 const activityController = require("../../controllers/activityController");
 
 // Matches with "/api/activity"
-router.route("/")
+router
+  .route("/")
   .get(activityController.findAll)
   .post(activityController.create);
 
@@ -15,8 +15,6 @@ router
   .delete(activityController.remove);
 
 // Matches with "api/activity/:user"
-router
-  .route("/user/:user")
-  .get(activityController.findByUser);
+router.route("/user/:user").get(activityController.findByUser);
 
 module.exports = router;

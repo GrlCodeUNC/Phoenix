@@ -1,6 +1,5 @@
 import React from "react";
 import "bulma/css/bulma.css";
-//importing the react bulma components
 import Container from "react-bulma-components/lib/components/container";
 import Field from "react-bulma-components/lib/components/form/components/field";
 import Control from "react-bulma-components/lib/components/form/components/control";
@@ -8,7 +7,6 @@ import Input from "react-bulma-components/lib/components/form/components/input";
 import Label from "react-bulma-components/lib/components/form/components/label";
 import Textarea from "react-bulma-components/lib/components/form/components/textarea";
 import "./Form.css";
-
 
 const Form = () => (
   <Container default className="Form">
@@ -38,17 +36,5 @@ const Form = () => (
     </div>
   </Container>
 );
-
-// class Form extends Component {
-
-//     render() {
-//         let className = '';
-//         if (this.props.location === 'DescriptionTitle') {
-//             className = 'Description-Title'
-//         } else if (this.props.location === 'dashboard') {
-//             cssClass = 'Logo-Dashboard'
-//         }
-//     }
-// }
 
 export default Form;

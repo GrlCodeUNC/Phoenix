@@ -1,49 +1,32 @@
-.allForms {
-    
-}
 .submit {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 30px;
-    background-color: #f99a1c;
-    color: white;
-    border: none;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  background-color: #f99a1c;
+  color: white;
+  border: none;
 }
 
 .form {
-    margin-left: auto;
-    margin-right: auto;
-    width: 60%;
-    padding: 50px;
-    border-style: solid;
-    border-radius: 5px;
-    border-color:  #bf431d;
-    margin-top: 70px;
-}
-
-.descriptionTitle {
-    /* margin-top: 50px; */
-    
-    
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  padding: 50px;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: #bf431d;
+  margin-top: 70px;
 }
 
 .descriptionTimeline {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
-/* .titleHeading {
-    color: grey;
-} */
-
 .title {
-    margin-bottom: 30px;
-    height: 10px;
+  margin-bottom: 30px;
+  height: 10px;
 }
 
 .timeline {
-    padding: 20px;
-}
-
-.box {
-
+  padding: 20px;
 }
