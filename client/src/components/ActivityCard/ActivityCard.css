@@ -1,98 +1,70 @@
 .loadActivities {
-    /* height: auto;
-    width: 50%;
-    padding-top: 20px;
-    /* background: #ECEFF1;
-    height: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    padding: 20px;
-    justify-content: space-around;
-    align-content: flex-start;
-    overflow: auto; */
-    background: #fff;
-    /* display: inline-flex;
-    flex-flow: row wrap;
-    align-content: flex-start;
-    overflow: auto;  */
-    overflow: hidden;
-    display: inline-block;
-    border-radius: 2px;
-    /* height: 325px; */
-    /* height: 250px; */
-    margin: 1rem;
-    /* padding: 5px; */
-    /* position: relative; */
-    /* width: 325px; */
-    width: 240px;
-    box-shadow: 0 3px 6px #999, 0 3px 6px #999;
-    text-align: left;
-    
+  background: #fff;
+  overflow: hidden;
+  display: inline-block;
+  border-radius: 2px;
+  margin: 1rem;
+  width: 240px;
+  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+  text-align: left;
 }
 
 .cardDetails {
-    overflow: hidden;
-    padding: 10px;
+  overflow: hidden;
+  padding: 10px;
 }
 
 .deleteRightAlign {
-    position: absolute; 
-    right: 0;
-    margin-right: 5px;
+  position: absolute;
+  right: 0;
+  margin-right: 5px;
 }
 
 .content {
-    padding: 10px;
+  padding: 10px;
 }
 .card {
-    font-family: 'Varela Round', sans-serif;
+  font-family: "Varela Round", sans-serif;
 }
 
 .timeInfo {
-    font-family: 'Varela Round', sans-serif;
+  font-family: "Varela Round", sans-serif;
 }
 
 .overdue {
-
-    /* background-color: brown; */
-    background-color: #bf431d;
-    color: white;
-
+  background-color: #bf431d;
+  color: white;
 }
 
 .getItDone {
-
-    /* background-color: chocolate; */
-    background-color: #ffc8aa;
-    color: white;
+  background-color: #ffc8aa;
+  color: white;
 }
 
- .overlay {
-    position: absolute;
-    top: 48px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: gray;
-  }
-  
-  /* .container:hover .overlay { */
-  .card:hover .overlay {
-    opacity: 0.90;
-  }
-  
-  .text {
-    color: white;
-    font-size: 16px;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    text-align: center;
-  } 
+.overlay {
+  position: absolute;
+  top: 48px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: gray;
+}
 
+.card:hover .overlay {
+  opacity: 0.9;
+}
+
+.text {
+  color: white;
+  font-size: 16px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
