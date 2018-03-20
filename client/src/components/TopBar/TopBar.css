@@ -1,28 +1,24 @@
-
-
- .search {
-    width: 100%;
-   
-} 
+.search {
+  width: 100%;
+}
 
 .addButton {
-    margin-right: 10px;
-    background-color: #ffc8aa;
-    color: white;
-    border: none;
-    position:fixed;
+  margin-right: 10px;
+  background-color: #bf431d;
+  color: white;
+  border: none;
+  position: fixed;
 }
 
 .searchBar {
-   float: right; 
-   position: fixed;
+  float: right;
+  position: fixed;
 }
 
-.section{
-    font-family: 'Varela Round', sans-serif;
+.section {
+  font-family: "Varela Round", sans-serif;
 }
 
 .field {
-    font-family: 'Varela Round', sans-serif;
+  font-family: "Varela Round", sans-serif;
 }
-

@@ -1,83 +1,47 @@
-/* body {
-    font-family: 'Varela Round', sans-serif;
-} */
-
 .NewActivity {
-       border-color: #bf431d;
-       border-style: solid;
-       border-radius: 5px;
-       width: 60%;
+  border-color: #bf431d;
+  border-style: solid;
+  border-radius: 5px;
+  width: 60%;
+  background: none;
 }
 
-/* .box {
-     border-radius: 25px;
-} */
-
 .title {
-    padding: 20px;
-    font-size: 50px;
-    color: #bf431d;
-    font-family: 'Varela Round', sans-serif;
+  padding: 20px;
+  font-size: 50px;
+  color: #bf431d;
+  font-family: "Varela Round", sans-serif;
 }
 
 .keyword {
-    padding: 30px;
-    margin-right: 200px;
-    margin-left: 200px;
+  padding: 30px;
+  margin-right: 200px;
+  margin-left: 200px;
 }
 
 .searchButton {
-    margin-top: 30px; 
-    background-color: #f99a1c;
-    opacity: .9;
-    color: white;
-    border-color: transparent;
-    
+  margin-top: 30px;
+  background-color: #f99a1c;
+  opacity: 0.9;
+  color: white;
+  border: none;
 }
 
 .searchButton.is-white {
-    color: #bf431d;
+  color: #bf431d;
 }
 
 .pictures {
-    background-color: white;
-    padding: 10px;
-    margin-top: 30px;
-    /* height: 300px; */   
+  padding: 10px;
+  margin-top: 30px;
 }
-/* 
-.size {
-    margin-right: 100px;
-    margin-left: 100px;
-} */
 
 .imageCard {
-    /* height: auto;
-    width: 50%;
-    padding-top: 20px;
-    /* background: #ECEFF1;
-    height: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    padding: 20px;
-    justify-content: space-around;
-    align-content: flex-start;
-    overflow: auto; */
-    /* background: #fff; */
-    /* display: inline-flex;
-    flex-flow: row wrap;
-    align-content: flex-start;
-    overflow: auto;  */
-    overflow: hidden;
-    display: inline-block;
-    border-radius: 2px;
-    /* height: 325px; */
-    height: 200px;
-    margin: 1rem;
-    /* padding: 5px; */
-    /* position: relative; */
-    /* width: 325px; */
-    width: 200px;
-    box-shadow: 0 3px 6px #bf431d, 0 3px 6px #999;
-    text-align: left;
+  overflow: hidden;
+  display: inline-block;
+  border-radius: 2px;
+  margin: 1rem;
+  width: 200px;
+  box-shadow: 0 3px 6px #bf431d, 0 3px 6px #999;
+  text-align: left;
 }

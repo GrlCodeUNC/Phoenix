@@ -29,12 +29,9 @@ app.get("*", function(req, res) {
 // Set up promises with mongoose
 mongoose.Promise = global.Promise;
 // Connect to the Mongo DB
-mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/phoenixdb",
-  {
-    // useMongoClient: true
-  }
-);
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/phoenixdb", {
+  // useMongoClient: true
+});
 
 // Start the API / express server
 app.listen(PORT, function() {
