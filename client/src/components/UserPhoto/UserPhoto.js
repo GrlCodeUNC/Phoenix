@@ -8,7 +8,7 @@ let UserPhoto = function statelessFunctionComponentClass(props) {
   
     let style = {
       width: '80px',
-      margin: '10px 5px 0px 5px',
+      margin: '10px 5px 0px 30px',
       borderRadius: "50%",
       position: 'fixed'
     };

@@ -19,12 +19,12 @@ const TopBar = props =>
     <Section>
             <div className="searchBar">
               <Link to={"/NewActivity"}>
-                <Button className="addButton" style={{marginTop: "60px", display: "inline"}}>
+                <Button className="addButton" style={{marginTop: "60px", marginLeft:"20px", display: "inline"}}>
                     +
                 </Button>
               </Link>
 
-                <Field style={{marginTop: "60px", marginLeft: "50px"}}>
+                <Field style={{marginTop: "60px", marginLeft: "60px"}}>
                     <Control>
                         <Input placeholder="Search" className="search" disabled/>
                     </Control>
