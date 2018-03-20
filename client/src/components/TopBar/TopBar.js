@@ -24,7 +24,7 @@ const TopBar = props =>
                 </Button>
               </Link>
 
-                <Field style={{marginTop: "60px", marginLeft: "50px"}}>
+                <Field style={{marginTop: "60px", marginLeft: "60px"}}>
                     <Control>
                         <Input placeholder="Search" className="search" disabled/>
                     </Control>
