@@ -1,8 +1,8 @@
 {
-  "main.css": "static/css/main.c3bdc644.css",
-  "main.css.map": "static/css/main.c3bdc644.css.map",
-  "main.js": "static/js/main.866a9dc9.js",
-  "main.js.map": "static/js/main.866a9dc9.js.map",
+  "main.css": "static/css/main.3e0d1d6d.css",
+  "main.css.map": "static/css/main.3e0d1d6d.css.map",
+  "main.js": "static/js/main.868b680a.js",
+  "main.js.map": "static/js/main.868b680a.js.map",
   "static\\media\\box.sass": "static/media/box.7c2da4c9.sass",
   "static\\media\\button.sass": "static/media/button.f8ec80e2.sass",
   "static\\media\\card.sass": "static/media/card.270b5b65.sass",
@@ -11,7 +11,7 @@
   "static\\media\\content.sass": "static/media/content.eaffe9ab.sass",
   "static\\media\\heading.sass": "static/media/heading.325775d8.sass",
   "static\\media\\image.sass": "static/media/image.a8c1cab1.sass",
-  "static\\media\\media.sass": "static/media/media.8a391c5e.sass",
+  "static\\media\\navbar.sass": "static/media/navbar.7ea0ef83.sass",
   "static\\media\\phoenix_logo.png": "static/media/phoenix_logo.61e09c4b.png",
   "static\\media\\section.sass": "static/media/section.c45dd329.sass"
 }
